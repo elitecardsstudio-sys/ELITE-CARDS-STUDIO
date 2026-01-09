@@ -93,7 +93,7 @@ body{
       🔗 Share Card
     </a>
 
-    <div class="footer">NFC • QR • Payments • Reviews</div>
+    <div class="footer">NFC • QR • Payments • Reviews • Lables • Letter Head • Customized Choco</div>
 
   </div>
 </div>
