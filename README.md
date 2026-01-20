@@ -104,7 +104,7 @@ body{
   overflow:hidden;
 ">
   <iframe
-    src="[https://www.chatbase.co/chatbot-iframe/YOUR_CHATBOT_ID](https://www.chatbase.co/chatbot-iframe/KiPhJg4UxPipUmrRbXAp3)"
+    src="https://www.chatbase.co/chatbot-iframe/YOUR_CHATBOT_ID (https://www.chatbase.co/chatbot-iframe/KiPhJg4UxPipUmrRbXAp3)"
     width="100%"
     height="100%"
     frameborder="0">
