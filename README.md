@@ -104,11 +104,11 @@ body{
   overflow:hidden;
 ">
   <iframe
-    src="https://www.chatbase.co/chatbot-iframe/YOUR_CHATBOT_ID (https://www.chatbase.co/chatbot-iframe/KiPhJg4UxPipUmrRbXAp3)"
-    width="30%"
-    height="30%"
-    frameborder="0">
-  </iframe>
+    src="https://www.chatbase.co/chatbot-iframe/KiPhJg4UxPipUmrRbXAp3"
+    width="50%"
+    style="height: 70%; min-height: 700px"
+    frameborder="5"
+></iframe>
 </div>
 
     <div class="footer">NFC • QR • Payments • Reviews • Lables • Letter Head • Customized Choco</div>
