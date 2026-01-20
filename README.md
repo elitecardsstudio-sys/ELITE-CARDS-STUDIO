@@ -105,9 +105,9 @@ body{
 ">
   <iframe
     src="https://www.chatbase.co/chatbot-iframe/KiPhJg4UxPipUmrRbXAp3"
-    width="50%"
-    style="height: 70%; min-height: 700px"
-    frameborder="5"
+    width="100%"
+    style="height: 100%; min-height: 700px"
+    frameborder="0"
 ></iframe>
 </div>
 
