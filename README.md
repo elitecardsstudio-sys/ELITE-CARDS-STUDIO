@@ -111,7 +111,7 @@ body{
 ></iframe>
 </div>
 
-    <div class="footer">NFC • QR • Payments • Reviews • Lables • Letter Head • Customized Choco</div>
+    <div class="footer">NFC • QR • Premium Business Cards • Payments • Reviews • Lables • Letter Head</div>
 
   </div>
 </div>
