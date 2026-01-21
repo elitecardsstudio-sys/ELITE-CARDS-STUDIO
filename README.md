@@ -67,11 +67,11 @@ body{
     <div class="role">Premium Visiting Card Designer</div>
 
     <!-- PRIMARY ACTIONS -->
-    <a class="btn" href="tel:+919994757489">📞 Call Now</a>
+    <a class="btn" href="tel:+919655223394">📞 Call Now</a>
 
     <!-- Auto WhatsApp (opens chat with message) -->
     <a class="btn"
-      href="https://wa.me/919994757489?text=Hello%20Elite%20Cards%20Studio%2C%20I%20need%20premium%20visiting%20cards">
+      href="https://wa.me/919655223394?text=Hello%20Elite%20Cards%20Studio%2C%20I%20need%20premium%20visiting%20cards">
       💬 WhatsApp (Auto)
     </a>
 
