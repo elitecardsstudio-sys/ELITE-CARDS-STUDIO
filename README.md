@@ -93,6 +93,7 @@ body{
       🔗 Share Card
     </a>
 
+
     <div class="footer">NFC • QR • Premium Business Cards • Payments • Reviews • Lables • Letter Head</div>
 
   </div>
