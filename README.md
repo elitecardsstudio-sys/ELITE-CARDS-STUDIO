@@ -79,7 +79,7 @@ body{
     <div class="grid">
       <a class="btn small" href="mailto:elitecardsstudio@gmail.com">📧 Email</a>
       <a class="btn small" href="elitecards.vcf" download>💾 Save Contact</a>
-      <a class="btn small" href="[https://maps.google.com](https://www.google.com/maps/dir//Kakkanji+Nagar,+Keeranur,+Tamil+Nadu+624617/@10.600448,77.5029226,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3ba9c3dc7a44437b:0x14fc212c1a3d2224!2m2!1d77.5042696!2d10.5952454?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D)">📍 Location</a>
+      <a class="btn small" href="[https://maps.google.com](https://share.google/6zyZd0vwDLB3uUf16)">📍 Location</a>
 
       <!-- PAYMENT: replace UPI id -->
       <a class="btn small" href="upi://pay?pa=9655223394@jupiteraxis&pn=Elite%20Cards%20Studio&cu=INR">
