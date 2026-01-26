@@ -94,7 +94,7 @@ body{
     </a>
 
 
-    <div class="footer">NFC • QR • Premium Business Cards • Payments • Reviews • Lables • Letter Head</div>
+    <div class="footer">NFC • Premium Business Cards • Corporate Bulk Visiting Cards •  Lables • Letter Head</div>
 
   </div>
 </div>
