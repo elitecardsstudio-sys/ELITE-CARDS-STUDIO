@@ -92,24 +92,6 @@ body{
     <a class="btn" href="#" onclick="navigator.share ? navigator.share({title:'Elite Cards Studio',url:location.href}) : alert('Share this link');">
       🔗 Share Card
     </a>
-<div style="
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  width:360px;
-  height:520px;
-  z-index:9999;
-  box-shadow:0 10px 30px rgba(0,0,0,0.2);
-  border-radius:16px;
-  overflow:hidden;
-">
-  <iframe
-    src="https://www.chatbase.co/chatbot-iframe/KiPhJg4UxPipUmrRbXAp3"
-    width="100%"
-    style="height: 100%; min-height: 500px"
-    frameborder="0"
-></iframe>
-</div>
 
     <div class="footer">NFC • QR • Premium Business Cards • Payments • Reviews • Lables • Letter Head</div>
 
