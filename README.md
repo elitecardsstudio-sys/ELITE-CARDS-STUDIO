@@ -148,7 +148,7 @@ button{
 <div class="card">
 
   <!-- Logo -->
-  <img src="elite-logo.png" class="logo" alt="Elite Cards Studio">
+  <img src="elite_logo.png" class="logo" alt="Elite Cards Studio">
 
   <!-- Owner -->
   <img src="owner.jpg" class="owner" alt="Founder">
