@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -19,15 +18,13 @@
 body{
   margin:0;
   font-family:'Segoe UI', Arial, sans-serif;
-  background:#000;
+  background:#000;   /* CLEAN BACKGROUND */
   color:#f5d27a;
 }
 
 .container{
   min-height:100vh;
-  background:
-    linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
-    url('background.jpg') center/cover no-repeat;
+  background:#000;   /* REMOVED IMAGE + GRADIENT */
   display:flex;
   align-items:center;
   justify-content:center;
@@ -37,7 +34,7 @@ body{
 .card{
   max-width:420px;
   width:100%;
-  background:rgba(0,0,0,.72);
+  background:rgba(0,0,0,.75);
   border:1px solid #f5d27a;
   border-radius:22px;
   padding:26px 18px;
@@ -45,9 +42,15 @@ body{
   animation:fadeUp .9s ease;
 }
 
-/* LOGO */
+/* SQUARE LOGO */
 .logo-img{
   width:90px;
+  height:90px;
+  object-fit:contain;
+  border-radius:12px;
+  border:2px solid #f5d27a;
+  padding:8px;
+  background:rgba(0,0,0,.6);
   margin-bottom:10px;
 }
 
@@ -121,10 +124,7 @@ body{
 <div class="container">
   <div class="card">
 
-    <!-- LOGO -->
     <img src="elite_logoo.png" alt="Elite Cards Studio Logo" class="logo-img">
-
-    <!-- PROFILE PHOTO -->
     <img src="owner.jpg" alt="Profile Photo" class="profile">
 
     <div class="logo">ELITE</div>
@@ -154,7 +154,9 @@ body{
       🔗 Share Card
     </a>
 
-    <div class="footer">Luxury NFC Visiting Cards • Digital Business Cards • Corporate Bulk Business Cards • Letterheads • QR Code & Smart Profiles</div>
+    <div class="footer">
+      Luxury NFC Visiting Cards • Digital Business Cards • Corporate Bulk Business Cards • Letterheads • QR Code & Smart Profiles
+    </div>
 
   </div>
 </div>
