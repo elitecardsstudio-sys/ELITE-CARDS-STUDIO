@@ -167,7 +167,7 @@ body{
     <div class="sub">CARDS STUDIO</div>
 
     <!-- PROFILE -->
-    <img src="assets/photo.jpg" class="profile-img" alt="Muneeswaran R">
+    <img src="assets/owner.jpg" class="profile-img" alt="Muneeswaran R">
     <div class="name">Muneeswaran R</div>
     <div class="role">Premium Visiting Card Designer</div>
 
