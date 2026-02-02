@@ -1,225 +1,163 @@
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elite Cards Studio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Elite Cards Studio | Digital Card</title>
 
 <style>
+@keyframes glow {
+  0% { box-shadow: 0 0 0px #d4af37; }
+  50% { box-shadow: 0 0 18px #f5d27a; }
+  100% { box-shadow: 0 0 0px #d4af37; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 body{
   margin:0;
-  font-family:"Poppins",Arial,sans-serif;
-  background:#0a0a0a;
-  color:#d4af37;
+  font-family:'Segoe UI', Arial, sans-serif;
+  background:#000;
+  color:#f5d27a;
 }
 
 .container{
-  max-width:420px;
-  margin:auto;
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
+    url('background.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   padding:18px;
 }
 
-/* Card */
 .card{
-  background:linear-gradient(145deg,#111,#000);
+  max-width:420px;
+  width:100%;
+  background:rgba(0,0,0,.72);
+  border:1px solid #f5d27a;
   border-radius:22px;
-  padding:24px;
-  border:1px solid #2a2200;
-  box-shadow:0 0 30px rgba(212,175,55,0.25);
+  padding:26px 18px;
+  text-align:center;
+  animation:fadeUp .9s ease;
 }
 
-/* Logo */
-.logo{
+/* LOGO */
+.logo-img{
   width:90px;
-  display:block;
-  margin:auto;
+  margin-bottom:10px;
 }
 
-/* Owner Photo */
-.owner{
-  width:120px;
-  height:120px;
+/* PROFILE PHOTO */
+.profile{
+  width:110px;
+  height:110px;
   border-radius:50%;
-  border:3px solid #d4af37;
-  margin:16px auto;
-  display:block;
   object-fit:cover;
+  border:3px solid #f5d27a;
+  margin:12px auto;
 }
 
-h2{
-  text-align:center;
-  margin:10px 0 4px;
+.logo{
+  font-size:34px;
+  letter-spacing:2px;
+  font-weight:700;
 }
-
-.role{
-  text-align:center;
-  color:#c9b15f;
-  font-weight:600;
-}
-
-.brand{
-  text-align:center;
+.sub{
   font-size:14px;
-  color:#aaa;
+  letter-spacing:4px;
+  margin-bottom:10px;
+}
+.name{
+  font-size:22px;
+  margin-top:6px;
+}
+.role{
+  font-size:14px;
+  opacity:.85;
   margin-bottom:18px;
 }
 
-/* Buttons */
 .btn{
   display:block;
-  text-align:center;
-  padding:13px;
+  padding:14px;
   margin:10px 0;
-  border-radius:14px;
-  text-decoration:none;
-  font-weight:600;
-  letter-spacing:.5px;
-}
-
-.call{ background:#d4af37; color:#000; }
-.whatsapp{ background:#128c7e; color:#fff; }
-.map{
-  background:#0f0f0f;
-  border:1px solid #d4af37;
-  color:#d4af37;
-}
-
-/* Services */
-.services{
-  margin-top:20px;
-  background:#0f0f0f;
-  padding:18px;
-  border-radius:18px;
-  border:1px solid #2a2200;
-}
-
-.services ul{
-  padding-left:18px;
-  margin:0;
-}
-
-.services li{
-  margin:8px 0;
-}
-
-/* Enquiry */
-.form{
-  margin-top:20px;
-  background:#0f0f0f;
-  padding:18px;
-  border-radius:18px;
-  border:1px solid #2a2200;
-}
-
-input, textarea{
-  width:100%;
-  margin-top:10px;
-  padding:12px;
-  background:#000;
-  border:1px solid #333;
-  border-radius:12px;
-  color:#fff;
-}
-
-button{
-  width:100%;
-  margin-top:15px;
-  padding:13px;
-  background:#d4af37;
+  background:linear-gradient(135deg,#f5d27a,#d4af37);
   color:#000;
-  border:none;
+  text-decoration:none;
+  font-weight:700;
   border-radius:14px;
-  font-size:16px;
-  font-weight:bold;
+  transition:.2s;
+}
+.btn:hover{
+  transform:scale(1.03);
+  animation:glow 1.2s infinite;
 }
 
-/* Footer */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:10px;
+}
+.small{
+  padding:12px;
+  font-size:14px;
+}
+
 .footer{
-  text-align:center;
+  margin-top:18px;
   font-size:12px;
-  margin-top:16px;
-  color:#777;
+  opacity:.7;
 }
 </style>
 </head>
 
 <body>
+
 <div class="container">
+  <div class="card">
 
-<div class="card">
+    <!-- LOGO -->
+    <img src="elite_logoo.png" alt="Elite Cards Studio Logo" class="logo-img">
 
-  <!-- Logo -->
-  <img src="elite_logoo.png" class="logo" alt="Elite Cards Studio">
+    <!-- PROFILE PHOTO -->
+    <img src="owner.jpg" alt="Profile Photo" class="profile">
 
-  <!-- Owner -->
-  <img src="owner.jpg" class="owner" alt="Founder">
+    <div class="logo">ELITE</div>
+    <div class="sub">CARDS STUDIO</div>
 
-  <h2>Elite Cards Studio</h2>
-  <div class="role">Luxury NFC & Digital Card Agency</div>
-  <div class="brand">Premium Business Cards</div>
+    <div class="name">Muneeswaran R</div>
+    <div class="role">Premium Visiting Card Designer</div>
 
-  <a href="tel:+919655223394" class="btn call">📞 Call Us</a>
+    <a class="btn" href="tel:+919655223394">📞 Call Now</a>
 
-  <a href="https://wa.me/919655223394?text=Hello%20Elite%20Cards%20Studio,%20I%20need%20a%20luxury%20digital%20card"
-     class="btn whatsapp">💬 WhatsApp Enquiry</a>
-
-<!-- CONTACT SAVE -->
-    <a class="btn btn-gold" href="assets/Elite_Cards_Studio.vcf">
-      💾 Save Contact
+    <a class="btn"
+      href="https://wa.me/919655223394?text=Hello%20Elite%20Cards%20Studio%2C%20I%20need%20premium%20visiting%20cards">
+      💬 WhatsApp
     </a>
-    
-  <a href="https://www.google.com/maps?q=Elite+Cards+Studio"
-     target="_blank" class="btn map">📍 Studio Location</a>
 
-  <!-- Services -->
-  <div class="services">
-    <h3>Our Services</h3>
-    <ul>
-      <li>Luxury NFC Visiting Cards</li>
-      <li>Digital Business Cards</li>
-      <li>Doctor & Business Branding</li>
-      <li>QR Code & Smart Profiles</li>
-      <li>Corporate Bulk Business Cards</li>
-      <li>Letterheads</li>
-    </ul>
+    <div class="grid">
+      <a class="btn small" href="mailto:elitecardsstudio@gmail.com">📧 Email</a>
+      <a class="btn small" href="Elite_Cards_Studio.vcf" download>💾 Save Contact</a>
+      <a class="btn small" href="https://maps.google.com">📍 Location</a>
+      <a class="btn small" href="upi://pay?pa=9655223394@jupiteraxis&pn=Elite%20Cards%20Studio&cu=INR">💳 Pay</a>
+    </div>
+
+    <a class="btn" href="https://g.page/r/REPLACE_REVIEW_LINK">⭐ Google Review</a>
+
+    <a class="btn" href="#"
+       onclick="navigator.share ? navigator.share({title:'Elite Cards Studio',url:location.href}) : alert('Share this link');">
+      🔗 Share Card
+    </a>
+
+    <div class="footer">Luxury NFC Visiting Cards • Digital Business Cards • Corporate Bulk Business Cards • Letterheads • QR Code & Smart Profiles</div>
+
   </div>
-
-  <!-- Enquiry Form -->
-  <div class="form">
-    <h3>Quick Enquiry</h3>
-    <input type="text" id="name" placeholder="Your Name" required>
-    <input type="tel" id="phone" placeholder="Mobile Number" required>
-    <textarea id="message" placeholder="Your Requirement"></textarea>
-    <button onclick="sendWhatsApp()">Send Enquiry</button>
-  </div>
-
 </div>
 
-<div class="footer">
-  © Elite Cards Studio • Luxury Digital Identity
-</div>
-
-</div>
-
-<script>
-function sendWhatsApp(){
-  var name = document.getElementById("name").value;
-  var phone = document.getElementById("phone").value;
-  var message = document.getElementById("message").value;
-
-  if(name==="" || phone===""){
-    alert("Please fill required fields");
-    return;
-  }
-
-  var text =
-    "Hello Elite Cards Studio,%0A%0A" +
-    "👤 Name: " + name + "%0A" +
-    "📞 Mobile: " + phone + "%0A" +
-    "📌 Requirement: " + message;
-
-  window.open(
-    "https://wa.me/919655223394?text=" + text,
-    "_blank"
-  );
-}
-</script>
+</body>
+</html>
