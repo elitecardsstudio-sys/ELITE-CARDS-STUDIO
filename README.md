@@ -1,5 +1,8 @@
 <html lang="en">
 <head>
+    <style>
+h1, header { display:none !important; }
+</style>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Elite Cards Studio | Digital Card</title>
@@ -14,7 +17,41 @@
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
 }
+  /* NFC TAP HINT */
+.nfc-hint{
+  margin:14px auto 6px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  font-size:13px;
+  color:#f5d27a;
+  opacity:.9;
+}
 
+.nfc-icon{
+  width:18px;
+  height:18px;
+  border:2px solid #f5d27a;
+  border-radius:6px;
+  position:relative;
+  animation:nfcPulse 1.8s infinite;
+}
+
+.nfc-icon::after{
+  content:'';
+  position:absolute;
+  inset:4px;
+  border:2px solid #f5d27a;
+  border-radius:4px;
+  opacity:.6;
+}
+
+@keyframes nfcPulse{
+  0%{ transform:scale(1); opacity:1; }
+  50%{ transform:scale(1.15); opacity:.6; }
+  100%{ transform:scale(1); opacity:1; }
+}
 body{
   margin:0;
   font-family:'Segoe UI', Arial, sans-serif;
@@ -32,7 +69,7 @@ body{
 }
 
 .card{
-  max-width:420px;
+  max-width:440px;
   width:100%;
   background:rgba(0,0,0,.75);
   border:1px solid #f5d27a;
@@ -126,11 +163,13 @@ body{
 
     <img src="elite_logoo.png" alt="Elite Cards Studio Logo" class="logo-img">
     <img src="owner.jpg" alt="Profile Photo" class="profile">
-<!-- NFC TAP HINT -->
+
+
+<!-- INSERT NFC HINT HERE -->
 <div class="nfc-hint">
   <div class="nfc-icon"></div>
   <span>Tap NFC Card</span>
-   </div>
+</div>
     <div class="logo">ELITE</div>
     <div class="sub">CARDS STUDIO</div>
 
