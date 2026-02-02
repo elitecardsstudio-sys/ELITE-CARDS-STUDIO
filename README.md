@@ -162,11 +162,15 @@ body{
 <div class="container">
   <div class="card">
       
-<!-- 1️⃣ LOGO FIRST -->
-<img src="elite_logoo.png" alt="Elite Cards Studio Logo" class="logo-img">
+<!-- LOGO -->
+    <img src="assets/logo.png" class="logo-img" alt="Elite Cards Studio">
+    <div class="sub">CARDS STUDIO</div>
 
-<!-- 2️⃣ PROFILE PHOTO SECOND -->
-<img src="owner.jpg" alt="Profile Photo" class="profile">
+    <!-- PROFILE -->
+    <img src="assets/photo.jpg" class="profile-img" alt="Muneeswaran R">
+    <div class="name">Muneeswaran R</div>
+    <div class="role">Premium Visiting Card Designer</div>
+
 
 <!-- 3️⃣ NFC TAP HINT THIRD -->
 <div class="nfc-hint">
