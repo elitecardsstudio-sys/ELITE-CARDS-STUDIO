@@ -177,11 +177,7 @@ body{
   <div class="nfc-icon"></div>
   <span>Tap NFC Card</span>
 </div>
-    <div class="logo">ELITE</div>
-    <div class="sub">CARDS STUDIO</div>
-
-    <div class="name">Muneeswaran R</div>
-    <div class="role">Premium Visiting Card Designer</div>
+    
 
     <a class="btn" href="tel:+919655223394">📞 Call Now</a>
 
