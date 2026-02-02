@@ -162,12 +162,11 @@ body{
 <div class="container">
   <div class="card">
       
-<!-- LOGO -->
-    <img src="assets/elite_logoo.png" class="logo-img" alt="Elite Cards Studio">
-    <div class="sub">CARDS STUDIO</div>
+  <!-- Logo -->
+  <img src="elite-logo.png" class="logo" alt="Elite Cards Studio">
 
-    <!-- PROFILE -->
-    <img src="assets/owner.jpg" class="profile-img" alt="Muneeswaran R">
+  <!-- Owner -->
+  <img src="owner.jpg" class="owner" alt="Founder">
     <div class="name">Muneeswaran R</div>
     <div class="role">Premium Visiting Card Designer</div>
 
@@ -185,18 +184,15 @@ body{
       href="https://wa.me/919655223394?text=Hello%20Elite%20Cards%20Studio%2C%20I%20need%20premium%20visiting%20cards">
       💬 WhatsApp
     </a>
-
     <div class="grid">
       <a class="btn small" href="mailto:elitecardsstudio@gmail.com">📧 Email</a>
       <a class="btn small" href="Elite_Cards_Studio.vcf" download>💾 Save Contact</a>
       <a class="btn small" href="https://maps.google.com">📍 Location</a>
       <a class="btn small" href="upi://pay?pa=9655223394@jupiteraxis&pn=Elite%20Cards%20Studio&cu=INR">💳 Pay</a>
     </div>
-
     <a class="btn" href="https://g.page/r/REPLACE_REVIEW_LINK">⭐ Google Review</a>
 <!-- SOCIAL -->
-    <a class="btn btn-instagram"
-       href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME"
+    <a class="btn btn-instagram"    href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME"
        target="_blank">📸 Instagram</a>
 
     <a class="btn btn-linkedin"
