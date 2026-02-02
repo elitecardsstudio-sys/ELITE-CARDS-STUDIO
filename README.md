@@ -69,7 +69,7 @@ body{
 }
 
 .card{
-  max-width:440px;
+  max-width:550px;
   width:100%;
   background:rgba(0,0,0,.75);
   border:1px solid #f5d27a;
@@ -86,7 +86,7 @@ body{
   object-fit:contain;
   border-radius:12px;
   border:2px solid #f5d27a;
-  padding:8px;
+  padding:1px;
   background:rgba(0,0,0,.6);
   margin-bottom:10px;
 }
