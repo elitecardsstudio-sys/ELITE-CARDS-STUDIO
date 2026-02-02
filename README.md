@@ -165,6 +165,7 @@ body{
   <!-- Logo -->
   <img src="elite_logoo.png" class="logo" alt="Elite Cards Studio">
 
+
   <!-- Owner -->
   <img src="owner.jpg" class="owner" alt="Founder">
     <div class="name">Muneeswaran R</div>
@@ -190,7 +191,7 @@ body{
       <a class="btn small" href="https://maps.google.com">📍 Location</a>
       <a class="btn small" href="upi://pay?pa=9655223394@jupiteraxis&pn=Elite%20Cards%20Studio&cu=INR">💳 Pay</a>
     </div>
-    <a class="btn" href="https://g.page/r/REPLACE_REVIEW_LINK">⭐ Google Review</a>
+    <a class="btn" href=https://form.svhrt.com/69782b6a5469c0f212941d47">⭐ CONTACT FORM</a>
 <!-- SOCIAL -->
     <a class="btn btn-instagram"    href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME"
        target="_blank">📸 Instagram</a>
