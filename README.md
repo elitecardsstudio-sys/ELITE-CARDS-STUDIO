@@ -86,7 +86,7 @@ body{
   object-fit:contain;
   border-radius:12px;
   border:2px solid #f5d27a;
-  padding:8px;
+  padding:1px;
   background:rgba(0,0,0,.6);
   margin-bottom:10px;
 }
@@ -163,12 +163,12 @@ body{
   <div class="card">
       
 <!-- LOGO -->
-    <img src="elite_logoo.png" alt="Elite Cards Studio Logo" class="logo-img">
+<img src="elite_logoo.png" alt="Elite Cards Studio Logo" class="logo-img">
 
 <!-- PROFILE PHOTO -->
-    <img src="owner.jpg" alt="Profile Photo" class="profile">
+<img src="owner.jpg" alt="Profile Photo" class="profile">
 
-<!-- INSERT NFC HINT HERE -->
+<!-- NFC TAP HINT -->
 <div class="nfc-hint">
   <div class="nfc-icon"></div>
   <span>Tap NFC Card</span>
