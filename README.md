@@ -126,7 +126,11 @@ body{
 
     <img src="elite_logoo.png" alt="Elite Cards Studio Logo" class="logo-img">
     <img src="owner.jpg" alt="Profile Photo" class="profile">
-
+<!-- NFC TAP HINT -->
+<div class="nfc-hint">
+  <div class="nfc-icon"></div>
+  <span>Tap NFC Card</span>
+   </div>
     <div class="logo">ELITE</div>
     <div class="sub">CARDS STUDIO</div>
 
