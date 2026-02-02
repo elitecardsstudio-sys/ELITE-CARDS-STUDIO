@@ -73,14 +73,14 @@ body{
 }
 
 .card{
-  max-width:440px;
+  max-width:480px;
   width:100%;
   background:rgba(0,0,0,.75);
   border:1px solid #f5d27a;
   border-radius:22px;
   padding:26px 18px;
   text-align:center;
-  animation:fadeUp .9s ease;
+  animation:fadeUp .15s ease;
 }
 
 /* LOGO */
@@ -90,9 +90,9 @@ body{
   object-fit:contain;
   border-radius:12px;
   border:2px solid #f5d27a;
-  padding:8px;
+  padding:0px;
   background:rgba(0,0,0,.6);
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 
 /* PROFILE PHOTO */
