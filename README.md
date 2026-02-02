@@ -91,6 +91,7 @@ body{
   margin-bottom:10px;
 }
 
+    
 /* PROFILE PHOTO */
 .profile{
   width:110px;
@@ -162,6 +163,7 @@ body{
   <div class="card">
 
     <img src="elite_logoo.png" alt="Elite Cards Studio Logo" class="logo-img">
+
     
     <img src="owner.jpg" alt="Profile Photo" class="profile">
 
