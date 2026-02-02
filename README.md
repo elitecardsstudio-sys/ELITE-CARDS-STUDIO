@@ -161,10 +161,11 @@ body{
 
 <div class="container">
   <div class="card">
-
+      
+<!-- LOGO -->
     <img src="elite_logoo.png" alt="Elite Cards Studio Logo" class="logo-img">
 
-    
+<!-- PROFILE PHOTO -->
     <img src="owner.jpg" alt="Profile Photo" class="profile">
 
 <!-- INSERT NFC HINT HERE -->
