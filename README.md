@@ -163,7 +163,7 @@ body{
   <div class="card">
       
 <!-- LOGO -->
-    <img src="assets/logo.png" class="logo-img" alt="Elite Cards Studio">
+    <img src="assets/elite_logoo.png" class="logo-img" alt="Elite Cards Studio">
     <div class="sub">CARDS STUDIO</div>
 
     <!-- PROFILE -->
