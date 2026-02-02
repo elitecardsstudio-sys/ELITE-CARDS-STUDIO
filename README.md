@@ -194,7 +194,14 @@ body{
     </div>
 
     <a class="btn" href="https://g.page/r/REPLACE_REVIEW_LINK">⭐ Google Review</a>
+<!-- SOCIAL -->
+    <a class="btn btn-instagram"
+       href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME"
+       target="_blank">📸 Instagram</a>
 
+    <a class="btn btn-linkedin"
+       href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME"
+       target="_blank">💼 LinkedIn</a>
     <a class="btn" href="#"
        onclick="navigator.share ? navigator.share({title:'Elite Cards Studio',url:location.href}) : alert('Share this link');">
       🔗 Share Card
