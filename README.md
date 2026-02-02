@@ -69,7 +69,7 @@ body{
 }
 
 .card{
-  max-width:550px;
+  max-width:440px;
   width:100%;
   background:rgba(0,0,0,.75);
   border:1px solid #f5d27a;
@@ -86,7 +86,7 @@ body{
   object-fit:contain;
   border-radius:12px;
   border:2px solid #f5d27a;
-  padding:1px;
+  padding:8px;
   background:rgba(0,0,0,.6);
   margin-bottom:10px;
 }
@@ -162,8 +162,8 @@ body{
   <div class="card">
 
     <img src="elite_logoo.png" alt="Elite Cards Studio Logo" class="logo-img">
+    
     <img src="owner.jpg" alt="Profile Photo" class="profile">
-
 
 <!-- INSERT NFC HINT HERE -->
 <div class="nfc-hint">
@@ -203,6 +203,14 @@ body{
 
   </div>
 </div>
-
+  <script>
+setTimeout(() => {
+  const nfc = document.querySelector('.nfc-hint');
+  if(nfc){
+    nfc.style.opacity = '0';
+    nfc.style.transition = 'opacity .6s ease';
+  }
+}, 6000);
+</script>
 </body>
 </html>
