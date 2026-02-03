@@ -175,7 +175,7 @@ body{
 }
 
 /* ===== MOBILE DEFAULT SCREEN FIX ===== */
-@media (max-width: 480px)
+@media (max-width: 420px)
 {
 
   .container{
