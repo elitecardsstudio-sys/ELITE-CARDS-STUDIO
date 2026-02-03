@@ -74,7 +74,7 @@ body{
 
 .card{
   width:100%;
-  max-width:420px;   /* PERFECT for mobile */
+  max-width:330px;   /* PERFECT for mobile */
   background:rgba(0,0,0,.75);
   border:1px solid #f5d27a;
   border-radius:22px;
@@ -175,7 +175,7 @@ body{
 }
 
 /* ===== MOBILE DEFAULT SCREEN FIX ===== */
-@media (max-width: 420px)
+@media (max-width: 330px)
 {
 
   .container{
