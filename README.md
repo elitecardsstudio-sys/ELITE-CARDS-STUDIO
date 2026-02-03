@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -65,13 +64,13 @@ body{
 }
 
 .container{
-  min-height:100svh;   /* mobile safe viewport */
+  min-height:100vh;
+  background:#000;   /* REMOVED IMAGE + GRADIENT */
   display:flex;
-  align-items:flex-start;  /* top align */
+  align-items:center;
   justify-content:center;
-  padding:16px 12px 32px;  /* bottom space controlled */
-}
-}
+  padding:18px;
+  }
 
 .card{
   width:100%;
