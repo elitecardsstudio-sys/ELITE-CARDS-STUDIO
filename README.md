@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -158,6 +158,20 @@ body{
   margin-top:18px;
   font-size:12px;
   opacity:.7;
+}
+/* FORCE VERTICAL STACK – FINAL FIX */
+.card > img {
+  display: block !important;
+  clear: both !important;
+  float: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* NFC hint also vertical */
+.nfc-hint{
+  display: flex !important;
+  justify-content: center;
 }
 </style>
 </head>
