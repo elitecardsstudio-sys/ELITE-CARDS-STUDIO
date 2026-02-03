@@ -73,14 +73,14 @@ body{
 }
 
 .card{
-  max-width:480px;
   width:100%;
+  max-width:420px;   /* PERFECT for mobile */
   background:rgba(0,0,0,.75);
   border:1px solid #f5d27a;
   border-radius:22px;
   padding:26px 18px;
   text-align:center;
-  animation:fadeUp .15s ease;
+  animation:fadeUp .9s ease;
 }
 
 /* LOGO */
@@ -172,6 +172,48 @@ body{
 .nfc-hint{
   display: flex !important;
   justify-content: center;
+}
+
+/* ===== MOBILE DEFAULT SCREEN FIX ===== */
+@media (max-width: 480px)
+{
+
+  .container{
+    padding:12px;
+  }
+
+  .card{
+    max-width:100%;
+    padding:22px 14px;
+  }
+
+  .logo-img{
+    width:80px;
+    height:80px;
+  }
+
+  .profile{
+    width:100px;
+    height:100px;
+  }
+
+  .logo{
+    font-size:30px;
+  }
+
+  .name{
+    font-size:20px;
+  }
+
+  .btn{
+    padding:13px;
+    font-size:15px;
+  }
+
+  .footer{
+    font-size:12px;
+    line-height:1.6;
+  }
 }
 </style>
 </head>
