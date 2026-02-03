@@ -65,11 +65,12 @@ body{
 }
 
 .container{
-  min-height:100vh;
+  min-height:100svh;   /* mobile safe viewport */
   display:flex;
-  align-items:center;
+  align-items:flex-start;  /* top align */
   justify-content:center;
-  padding:18px;
+  padding:16px 12px 32px;  /* bottom space controlled */
+}
 }
 
 .card{
@@ -214,6 +215,15 @@ body{
     font-size:12px;
     line-height:1.6;
   }
+@media (max-width:480px){
+  body{
+    overflow-y:auto;
+  }
+
+  .container{
+    min-height:auto;
+  }
+}
 }
 </style>
 </head>
