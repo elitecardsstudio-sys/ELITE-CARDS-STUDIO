@@ -109,7 +109,7 @@ body{
 .sub{
   font-size:14px;
   letter-spacing:4px;
-  margin-bottom:10px;
+  margin-bottom:4px;
 }
 .name{
   font-size:26px;
@@ -118,7 +118,7 @@ body{
 .role{
   font-size:14px;
   opacity:.85;
-  margin-bottom:18px;
+  margin-bottom:10px;
 }
 /* BUTTONS */
 .btn{
