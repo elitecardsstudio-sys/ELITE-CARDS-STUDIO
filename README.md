@@ -197,7 +197,7 @@ body{
     <div class="sub">CARDS STUDIO</div>
 
     <div class="name">Muneeswaran R</div>
-    <div class="role">Premium Visiting Card Designer</div>
+    <div class="role">CXO | Premium Visiting Card Designer</div>
 
     <a class="btn" href="tel:+919655223394">📞 Call Now</a>
 
@@ -228,8 +228,7 @@ body{
     </a>
 
     <div class="footer">
-      Luxury NFC Visiting Cards • Digital Business Cards • Corporate Bulk Business Cards<br>
-      Letterheads • QR Code & Smart Profiles
+      Luxury NFC Visiting Cards • Digital Business Cards • Corporate Bulk Business Cards • Letterheads • QR Code & Smart Profiles
     </div>
 
   </div>
