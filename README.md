@@ -1,289 +1,183 @@
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Elite Cards Studio | Digital Card</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite Digital Card</title>
 
 <style>
-/* HIDE GITHUB DEFAULT HEADER */
-h1, header { display:none !important; }
-/* ANIMATIONS */
-@keyframes glow {
-  0% { box-shadow: 0 0 0px #d4af37; }
-  50% { box-shadow: 0 0 18px #f5d27a; }
-  100% { box-shadow: 0 0 0px #d4af37; }
-}
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-/* NFC TAP HINT */
-.nfc-hint{
-  margin:14px auto 6px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  font-size:13px;
-  color:#f5d27a;
-  opacity:.8;
-}
-.nfc-icon{
-  width:18px;
-  height:18px;
-  border:2px solid #f5d27a;
-  border-radius:6px;
-  position:relative;
-  animation:nfcPulse 1.8s infinite;
-}
-.nfc-icon::after{
-  content:'';
-  position:absolute;
-  inset:4px;
-  border:2px solid #f5d27a;
-  border-radius:4px;
-  opacity:.6;
-}
-@keyframes nfcPulse{
-  0%{ transform:scale(1); opacity:1; }
-  50%{ transform:scale(1.15); opacity:.6; }
-  100%{ transform:scale(1); opacity:1; }
-}
-
-/* BASE */
 body{
   margin:0;
-  font-family:'Segoe UI', Arial, sans-serif;
-  background:#000;
-  color:#f5d27a;
-}
-
-.container{
-  min-height:100vh;
-  background:#000;   /* REMOVED IMAGE + GRADIENT */
+  background:#f2f2f2;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
   display:flex;
-  align-items:center;
   justify-content:center;
-  padding:18px;
-  }
+  padding:18px 10px;
+}
 
 .card{
   width:100%;
-  max-width:380px;   /* PERFECT for mobile */
-  background:rgba(0,0,0,.75);
-  border:1px solid #f5d27a;
-  border-radius:22px;
-  padding:26px 18px;
-  text-align:center;
-  animation:fadeUp .9s ease;
+  max-width:390px;
+  background:#fff;
+  border-radius:28px;
+  box-shadow:0 14px 34px rgba(0,0,0,.14);
+  padding:22px 18px 20px;
 }
 
 /* LOGO */
-.logo-img{
-  width:90px;
-  height:90px;
+.logo{
+  width:64px;
+  height:64px;
+  border-radius:14px;
   object-fit:contain;
-  border-radius:12px;
-  border:2px solid #f5d27a;
-  padding:0px;
-  background:rgba(0,0,0,.6);
-  margin-bottom:14px;
+  display:block;
+  margin:0 auto 8px;
+  border:1px solid #ddd;
+  padding:6px;
 }
 
-/* PROFILE PHOTO */
+/* PROFILE */
 .profile{
-  width:110px;
-  height:110px;
+  width:96px;
+  height:96px;
   border-radius:50%;
   object-fit:cover;
-  border:3px solid #f5d27a;
-  margin:16px auto;
+  display:block;
+  margin:6px auto 8px;
+}
+
+/* NFC HINT */
+.nfc{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:6px;
+  font-size:13px;
+  color:#888;
+  margin-bottom:10px;
+}
+.nfc span{
+  font-size:16px;
 }
 
 /* TEXT */
-.logo{
-  font-size:34px;
-  letter-spacing:2px;
-  font-weight:700;
-}
-.sub{
-  font-size:14px;
-  letter-spacing:4px;
-  margin-bottom:4px;
-}
 .name{
-  font-size:26px;
-  margin-top:6px;
+  text-align:center;
+  font-size:22px;
+  font-weight:700;
+  margin:4px 0 2px;
 }
+
 .role{
+  text-align:center;
   font-size:14px;
-  opacity:.85;
+  color:#666;
   margin-bottom:10px;
 }
-/* BUTTONS */
-.btn{
-  display:block;
-  padding:14px;
-  margin:10px 0;
-  background:linear-gradient(135deg,#f5d27a,#d4af37);
-  color:#000;
-  text-decoration:none;
-  font-weight:700;
-  border-radius:14px;
-  transition:.2s;
+
+.company{
+  text-align:center;
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:14px;
 }
-.btn:hover{
-  transform:scale(1.03);
-  animation:glow 1.2s infinite;
+
+/* DETAILS */
+.details{
+  border-top:1px solid #eee;
+  padding-top:12px;
 }
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
+
+.row{
+  display:flex;
+  align-items:center;
   gap:10px;
-  margin-top:10px;
-}
-.small{
-  padding:12px;
   font-size:14px;
+  padding:8px 0;
+  color:#333;
 }
 
-.footer{
+.row span{
+  font-size:18px;
+}
+
+/* ACTION BUTTONS */
+.actions{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px;
   margin-top:18px;
+}
+
+.action{
+  background:#8b0000; /* DARK RED */
+  color:#fff;
+  border-radius:50%;
+  height:54px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  text-decoration:none;
+}
+
+.labels{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  margin-top:6px;
   font-size:12px;
-  opacity:.7;
+  color:#444;
 }
-/* FORCE VERTICAL STACK – FINAL FIX */
-.card > img {
-  display: block !important;
-  clear: both !important;
-  float: none !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* NFC hint also vertical */
-.nfc-hint{
-  display: flex !important;
-  justify-content: center;
-}
-
-/* ===== MOBILE DEFAULT SCREEN FIX ===== */
-@media (max-width: 380px)
-{
-
-  .container{
-    padding:12px;
-  }
-
-  .card{
-    max-width:100%;
-    padding:22px 14px;
-  }
-
-  .logo-img{
-    width:80px;
-    height:80px;
-  }
-  .profile{
-    width:100px;
-    height:100px;
-  }
-  .logo{
-    font-size:30px;
-  }
-
-  .name{
-    font-size:20px;
-  }
-  .btn{
-    padding:13px;
-    font-size:15px;
-  }
-
-  .footer{
-    font-size:12px;
-    line-height:1.6;
-  }
-@media (max-width:480px){
-  body{
-    overflow-y:auto;
-  }
-
-  .container{
-    min-height:auto;
-  }
-}
+.labels div{
+  text-align:center;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-  <div class="card">
+<div class="card">
 
-    <!-- LOGO FIRST -->
-    <img src="elite_logoo.png" alt="Elite Cards Studio Logo" class="logo-img">
+  <!-- LOGO -->
+  <img src="elite_logoo.png" class="logo" alt="Logo">
 
-    <!-- PROFILE PHOTO AFTER LOGO -->
-    <img src="owner.jpg" alt="Profile Photo" class="profile">
+  <!-- PROFILE -->
+  <img src="owner.jpg" class="profile" alt="Profile">
 
-    <!-- NFC TAP HINT -->
-    <div class="nfc-hint">
-      <div class="nfc-icon"></div>
-      <span>Tap NFC Card</span>
-    </div>
-
-    <div class="logo">ELITE</div>
-    <div class="sub">CARDS STUDIO</div>
-
-    <div class="name">Muneeswaran R</div>
-    <div class="role">CXO | Premium Visiting Card Designer</div>
-
-    <a class="btn" href="tel:+919655223394">📞 Call Now</a>
-
-    <a class="btn"
-      href="https://wa.me/919655223394?text=Hello%20Elite%20Cards%20Studio%2C%20I%20need%20premium%20visiting%20cards">
-      💬 WhatsApp
-    </a>
-
-    <div class="grid">
-      <a class="btn small" href="mailto:elitecardsstudio@gmail.com">📧 Email</a>
-      <a class="btn small" href="Elite_Cards_Studio.vcf" download>💾 Save Contact</a>
-      <a class="btn small" href="https://maps.google.com">📍 Location</a>
-      <a class="btn small" href="upi://pay?pa=9655223394@jupiteraxis&pn=Elite%20Cards%20Studio&cu=INR">💳 Pay</a>
-    </div>
-
-    <a class="btn" href="https://g.page/r/REPLACE_REVIEW_LINK">⭐ Google Review</a>
-  <!-- SOCIAL -->
-    <a class="btn btn-instagram"
-       href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME"
-       target="_blank">📸 Instagram</a>
-
-    <a class="btn btn-linkedin"
-       href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME"
-       target="_blank">💼 LinkedIn</a>
-    <a class="btn" href="#"
-       onclick="navigator.share ? navigator.share({title:'Elite Cards Studio',url:location.href}) : alert('Share this link');">
-      🔗 Share Card
-    </a>
-
-    <div class="footer">
-      Luxury NFC Visiting Cards • Digital Business Cards • Corporate Bulk Business Cards • Letterheads • QR Code & Smart Profiles
-    </div>
-
+  <!-- NFC -->
+  <div class="nfc">
+    <span>📳</span> Tap NFC Card
   </div>
-</div>
 
-<script>
-setTimeout(() => {
-  const nfc = document.querySelector('.nfc-hint');
-  if(nfc){
-    nfc.style.opacity = '0';
-    nfc.style.transition = 'opacity .6s ease';
-  }
-}, 6000);
-</script>
+  <div class="name">Muneeswaran R</div>
+  <div class="role">CXO | Premium Visiting Card Designer</div>
+  <div class="company">ELITE CARDS STUDIO</div>
+
+  <!-- DETAILS -->
+  <div class="details">
+    <div class="row"><span>📍</span> Chennai, Tamil Nadu</div>
+    <div class="row"><span>🌐</span> elitecardsstudio.in</div>
+    <div class="row"><span>✉️</span> elitecardsstudio@gmail.com</div>
+    <div class="row"><span>📞</span> +91 96552 23394</div>
+  </div>
+
+  <!-- ACTION ICONS -->
+  <div class="actions">
+    <a href="tel:+919655223394" class="action">📞</a>
+    <a href="https://wa.me/919655223394" class="action">💬</a>
+    <a href="Elite_Cards_Studio.vcf" download class="action">💾</a>
+    <a href="upi://pay?pa=9655223394@upi&pn=Elite%20Cards%20Studio&cu=INR" class="action">💳</a>
+    <a href="https://elitecardsstudio.in" class="action">🌐</a>
+  </div>
+
+  <div class="labels">
+    <div>Call</div>
+    <div>WhatsApp</div>
+    <div>Save</div>
+    <div>UPI</div>
+    <div>Web</div>
+  </div>
+
+</div>
 
 </body>
 </html>
