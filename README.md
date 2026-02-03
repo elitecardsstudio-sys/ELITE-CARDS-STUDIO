@@ -92,7 +92,7 @@ body{
   border:2px solid #f5d27a;
   padding:0px;
   background:rgba(0,0,0,.6);
-  margin-bottom:12px;
+  margin-bottom:14px;
 }
 
 /* PROFILE PHOTO */
@@ -102,7 +102,7 @@ body{
   border-radius:50%;
   object-fit:cover;
   border:3px solid #f5d27a;
-  margin:12px auto;
+  margin:16px auto;
 }
 
 /* TEXT */
@@ -117,7 +117,7 @@ body{
   margin-bottom:10px;
 }
 .name{
-  font-size:22px;
+  font-size:26px;
   margin-top:6px;
 }
 .role{
