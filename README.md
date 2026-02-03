@@ -7,7 +7,6 @@
 <style>
 /* HIDE GITHUB DEFAULT HEADER */
 h1, header { display:none !important; }
-
 /* ANIMATIONS */
 @keyframes glow {
   0% { box-shadow: 0 0 0px #d4af37; }
@@ -18,7 +17,6 @@ h1, header { display:none !important; }
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
 /* NFC TAP HINT */
 .nfc-hint{
   margin:14px auto 6px;
@@ -30,7 +28,6 @@ h1, header { display:none !important; }
   color:#f5d27a;
   opacity:.8;
 }
-
 .nfc-icon{
   width:18px;
   height:18px;
@@ -39,7 +36,6 @@ h1, header { display:none !important; }
   position:relative;
   animation:nfcPulse 1.8s infinite;
 }
-
 .nfc-icon::after{
   content:'';
   position:absolute;
@@ -48,7 +44,6 @@ h1, header { display:none !important; }
   border-radius:4px;
   opacity:.6;
 }
-
 @keyframes nfcPulse{
   0%{ transform:scale(1); opacity:1; }
   50%{ transform:scale(1.15); opacity:.6; }
@@ -125,7 +120,6 @@ body{
   opacity:.85;
   margin-bottom:18px;
 }
-
 /* BUTTONS */
 .btn{
   display:block;
@@ -142,7 +136,6 @@ body{
   transform:scale(1.03);
   animation:glow 1.2s infinite;
 }
-
 .grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -191,12 +184,10 @@ body{
     width:80px;
     height:80px;
   }
-
   .profile{
     width:100px;
     height:100px;
   }
-
   .logo{
     font-size:30px;
   }
@@ -204,7 +195,6 @@ body{
   .name{
     font-size:20px;
   }
-
   .btn{
     padding:13px;
     font-size:15px;
