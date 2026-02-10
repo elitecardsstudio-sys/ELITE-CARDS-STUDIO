@@ -1,24 +1,21 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<style>  
-h1, header { display:none !important; }  
-</style> 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elite Cards Studio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
-  font-family:'Poppins',sans-serif;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
   background:radial-gradient(circle at top left,#1a1a1a,#000 70%);
+  color:#f5d27a;
   min-height:100vh;
   display:flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
   perspective:1400px;
   overflow:hidden;
 }
@@ -26,8 +23,8 @@ body{
 /* FLOATING PARTICLES */
 .particle{
   position:absolute;
-  width:5px;
-  height:5px;
+  width:4px;
+  height:4px;
   background:#d4af37;
   border-radius:50%;
   opacity:.25;
@@ -38,39 +35,67 @@ body{
   to{transform:translateY(-10vh)}
 }
 
-/* GLASS CARD */
+/* CENTER */
+.wrapper{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  padding:20px;
+}
+
+/* CARD */
 .card{
   width:100%;
   max-width:380px;
-  padding:32px 24px;
   border-radius:28px;
-  backdrop-filter:blur(20px);
+  padding:22px 18px 26px;
+  backdrop-filter:blur(18px);
   background:rgba(255,255,255,0.06);
-  border:1px solid rgba(212,175,55,0.25);
-  box-shadow:0 25px 70px rgba(0,0,0,.7);
+  border:1px solid rgba(212,175,55,.25);
+  box-shadow:0 25px 60px rgba(0,0,0,.7);
   transform-style:preserve-3d;
   transition:transform .2s ease;
-  position:relative;
-  overflow:hidden;
+}
+
+/* LOGO */
+.logo{
+  width:70px;
+  margin:0 auto 10px;
+  display:block;
 }
 
 /* PROFILE */
 .profile{
-  width:95px;
-  height:95px;
+  width:96px;
+  height:96px;
+  margin:10px auto 6px;
   border-radius:50%;
   border:3px solid #d4af37;
   object-fit:cover;
   display:block;
-  margin:0 auto 18px;
 }
 
-/* GOLD SHINE ELITE */
+/* NFC */
+.nfc-hint{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  font-size:13px;
+  margin-bottom:10px;
+  animation:nfcPulse 2.5s infinite;
+}
+@keyframes nfcPulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.1);opacity:.6}
+  100%{transform:scale(1)}
+}
+
+/* GOLD SHINE TEXT */
 .brand{
-  font-family:'Playfair Display',serif;
-  font-size:32px;
   text-align:center;
-  letter-spacing:3px;
+  font-size:30px;
+  font-weight:700;
+  letter-spacing:2px;
   background:linear-gradient(
     90deg,
     #b8962e 0%,
@@ -88,36 +113,11 @@ body{
   to{background-position:200% center;}
 }
 
-.sub{
+.brand-sub{
   text-align:center;
-  font-size:12px;
+  font-size:13px;
   letter-spacing:4px;
   margin-bottom:6px;
-  color:#f5d27a;
-  opacity:.8;
-}
-
-/* RGB DOTS */
-.rgb-dots{
-  display:flex;
-  justify-content:center;
-  gap:8px;
-  margin:8px 0 12px;
-}
-.dot{
-  width:10px;
-  height:10px;
-  border-radius:50%;
-  animation:rgbPulse 2.8s infinite ease-in-out;
-}
-.red{background:#ff3b30;box-shadow:0 0 8px #ff3b30;animation-delay:0s;}
-.green{background:#34c759;box-shadow:0 0 8px #34c759;animation-delay:.4s;}
-.blue{background:#007aff;box-shadow:0 0 8px #007aff;animation-delay:.8s;}
-
-@keyframes rgbPulse{
-  0%{transform:scale(1);opacity:1}
-  50%{transform:scale(1.2);opacity:.6}
-  100%{transform:scale(1);opacity:1}
 }
 
 /* NAME */
@@ -125,29 +125,26 @@ body{
   text-align:center;
   font-size:20px;
   font-weight:600;
-  color:#f5d27a;
-  margin-top:6px;
 }
 .role{
   text-align:center;
   font-size:13px;
   opacity:.85;
-  margin-bottom:20px;
-  color:#f5d27a;
+  margin-bottom:16px;
 }
 
 /* BUTTONS */
 .btn{
   display:block;
   width:100%;
+  text-align:center;
   padding:14px;
   margin:10px 0;
-  text-align:center;
-  border-radius:20px;
+  background:linear-gradient(135deg,#f5d27a,#d4af37);
+  color:#000;
   text-decoration:none;
   font-weight:600;
-  color:#000;
-  background:linear-gradient(135deg,#f5d27a,#d4af37);
+  border-radius:18px;
   transition:.3s;
 }
 .btn:hover{
@@ -155,23 +152,25 @@ body{
   box-shadow:0 0 25px rgba(245,210,122,.9);
 }
 
+/* GRID */
 .grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px;
-  margin-top:10px;
+  margin-top:8px;
 }
 .small{
-  font-size:14px;
   padding:12px;
+  font-size:14px;
 }
 
+/* FOOTER */
 .footer{
-  text-align:center;
+  margin-top:16px;
   font-size:11px;
-  margin-top:20px;
+  text-align:center;
+  line-height:1.6;
   opacity:.7;
-  color:#f5d27a;
 }
 </style>
 </head>
@@ -179,45 +178,44 @@ body{
 <body>
 
 <script>
-for(let i=0;i<20;i++){
+for(let i=0;i<18;i++){
   let p=document.createElement("div");
   p.className="particle";
   p.style.left=Math.random()*100+"vw";
-  p.style.animationDuration=(10+Math.random()*10)+"s";
+  p.style.animationDuration=(10+Math.random()*8)+"s";
   document.body.appendChild(p);
 }
 </script>
 
-<div class="card" id="tiltCard">
+<div class="wrapper">
+  <div class="card" id="tiltCard">
 
-  <img src="owner.jpg" class="profile" alt="Profile">
+    <img src="elite_logoo.png" class="logo" alt="Elite Logo">
+    <img src="owner.jpg" class="profile" alt="Profile">
 
-  <div class="brand">ELITE</div>
-  <div class="sub">CARDS STUDIO</div>
+    <div class="nfc-hint">Tap NFC Card</div>
 
-  <div class="rgb-dots">
-    <span class="dot red"></span>
-    <span class="dot green"></span>
-    <span class="dot blue"></span>
+    <div class="brand">ELITE</div>
+    <div class="brand-sub">CARDS STUDIO</div>
+
+    <div class="name">Muneeswaran R</div>
+    <div class="role">CXO | Premium Visiting Card Designer</div>
+
+    <a href="tel:+919655223394" class="btn">📞 Call Now</a>
+    <a href="https://wa.me/919655223394" class="btn">💬 WhatsApp</a>
+
+    <div class="grid">
+      <a href="mailto:elitecardsstudio@gmail.com" class="btn small">📧 Email</a>
+      <a href="Elite_Cards_Studio.vcf" download class="btn small">💾 Save</a>
+      <a href="https://maps.google.com" class="btn small">📍 Location</a>
+      <a href="upi://pay?pa=9655223394@upi&pn=Elite%20Cards%20Studio&cu=INR" class="btn small">💳 Pay</a>
+    </div>
+
+    <div class="footer">
+      Luxury NFC Visiting Cards · Digital Business Cards
+    </div>
+
   </div>
-
-  <div class="name">Muneeswaran R</div>
-  <div class="role">CXO | Premium Visiting Card Designer</div>
-
-  <a href="tel:+919655223394" class="btn">📞 Call</a>
-  <a href="https://wa.me/919655223394" class="btn">💬 WhatsApp</a>
-
-  <div class="grid">
-    <a href="Elite_Cards_Studio.vcf" download class="btn small">💾 Save</a>
-    <a href="https://maps.google.com" class="btn small">📍 Location</a>
-    <a href="#" class="btn small">⭐ Review</a>
-    <a href="#" class="btn small">📸 Instagram</a>
-  </div>
-
-  <div class="footer">
-    Luxury NFC Visiting Cards · Digital Identity Solutions
-  </div>
-
 </div>
 
 <script>
@@ -234,7 +232,7 @@ card.addEventListener("mousemove",(e)=>{
 });
 card.addEventListener("mouseleave",()=>card.style.transform="rotateX(0deg) rotateY(0deg)");
 
-/* TRUE GYROSCOPE */
+/* GYROSCOPE TILT */
 if(window.DeviceOrientationEvent){
   window.addEventListener("deviceorientation",(e)=>{
     let x=e.beta/25;
@@ -243,7 +241,7 @@ if(window.DeviceOrientationEvent){
   });
 }
 
-/* AUTO VCF DOWNLOAD (SAFE) */
+/* AUTO VCF DOWNLOAD */
 window.addEventListener("load",()=>{
   if(!localStorage.getItem("eliteDownloaded")){
     setTimeout(()=>{
