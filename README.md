@@ -1,9 +1,6 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <style>  
-h1, header { display:none !important; }  
-</style>  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elite Cards Studio</title>
@@ -146,13 +143,10 @@ body{
   color:#000;
   background:linear-gradient(135deg,#f5d27a,#d4af37);
   transition:all .3s ease;
-  position:relative;
-  overflow:hidden;
+  cursor:pointer;
 }
 
-/* ICON ANIMATION */
 .btn span{
-  display:inline-block;
   transition:transform .3s ease;
 }
 
@@ -160,7 +154,6 @@ body{
   transform:translateY(-3px) scale(1.2);
 }
 
-/* PREMIUM GLOW */
 .btn:hover{
   box-shadow:
     0 0 15px rgba(245,210,122,.8),
@@ -169,13 +162,31 @@ body{
   transform:translateY(-2px);
 }
 
+/* QR */
+.qr-section{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:16px;
+}
+#qrcode{
+  padding:8px;
+  background:rgba(255,255,255,0.08);
+  border-radius:14px;
+  border:1px solid rgba(212,175,55,0.4);
+}
+.qr-text{
+  font-size:10px;
+  margin-top:6px;
+  color:#f5d27a;
+}
+
 /* FOOTER */
 .footer{
   text-align:center;
   font-size:11px;
   margin-top:14px;
   color:#f5d27a;
-  line-height:1.6;
 }
 .footer-brand{
   font-weight:600;
@@ -202,52 +213,81 @@ for(let i=0;i<15;i++){
 
 <div class="card" id="tiltCard">
 
-  <img src="owner.jpg" class="profile">
+<img src="owner.jpg" class="profile">
 
-  <div class="brand">ELITE</div>
-  <div class="sub">CARDS STUDIO</div>
+<div class="brand">ELITE</div>
+<div class="sub">CARDS STUDIO</div>
 
-  <div class="rgb-dots">
-    <span class="dot red"></span>
-    <span class="dot green"></span>
-    <span class="dot blue"></span>
-  </div>
+<div class="rgb-dots">
+<span class="dot red"></span>
+<span class="dot green"></span>
+<span class="dot blue"></span>
+</div>
 
-  <div class="name">Muneeswaran R</div>
-  <div class="role">CXO | Creative Director</div>
+<div class="name">Muneeswaran R</div>
+<div class="role">CXO | Creative Director</div>
 
-  <div class="grid">
+<div class="grid">
 
-    <a href="tel:+919655223394" class="btn"><span>📞</span>Call</a>
-    <a href="https://wa.me/919655223394" class="btn"><span>💬</span>WhatsApp</a>
+<a href="tel:+919655223394" class="btn"><span>📞</span>Call</a>
+<a href="https://wa.me/919655223394" class="btn"><span>💬</span>WhatsApp</a>
 
-    <a href="Elite_Cards_Studio.vcf" download class="btn"><span>💾</span>Save</a>
-    <a href="mailto:elitecardsstudio@gmail.com" class="btn"><span>📧</span>Email</a>
+<a href="#" class="btn" id="saveBtn"><span>💾</span>Save</a>
+<a href="mailto:elitecardsstudio@gmail.com" class="btn"><span>📧</span>Email</a>
 
-    <a href="https://www.google.com/maps/search/?api=1&query=Elite+Cards+Studio" target="_blank" class="btn"><span>📍</span>Location</a>
-    <a href="upi://pay?pa=9655223394@jupiteraxis&pn=Muneeswaran&cu=INR" class="btn"><span>💳</span>UPI</a>
+<a href="https://www.google.com/maps/search/?api=1&query=Elite+Cards+Studio" target="_blank" class="btn"><span>📍</span>Location</a>
+<a href="upi://pay?pa=9655223394@jupiteraxis&pn=Muneeswaran&cu=INR" class="btn"><span>💳</span>UPI</a>
 
-    <a href="sample-design.html" class="btn"><span>🎨</span>Samples</a>
-    <a href="https://yourwebsite.com" target="_blank" class="btn"><span>🌐</span>Website</a>
-
-  </div>
-
-  <div class="footer">
-    Luxury NFC Identity Solutions for Modern Professionals <br>
-    <span class="footer-brand">Powered by Elite Cards Studio</span>
-  </div>
+<a href="sample-design.html" class="btn"><span>🎨</span>Samples</a>
+<a href="https://yourwebsite.com" target="_blank" class="btn"><span>🌐</span>Website</a>
 
 </div>
 
+<div class="qr-section">
+<div id="qrcode"></div>
+<p class="qr-text">Scan to Open Digital Card</p>
+</div>
+
+<div class="footer">
+Luxury NFC Identity Solutions for Modern Professionals <br>
+<span class="footer-brand">Powered by Elite Cards Studio</span>
+</div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
 <script>
+// QR GENERATOR
+new QRCode(document.getElementById("qrcode"), {
+text: window.location.href,
+width: 100,
+height: 100,
+colorDark : "#d4af37",
+colorLight : "#000000",
+correctLevel : QRCode.CorrectLevel.H
+});
+
+// SAVE CONTACT DOWNLOAD
+document.getElementById("saveBtn").addEventListener("click", function(e){
+e.preventDefault();
+const link = document.createElement("a");
+link.href = "Elite_Cards_Studio.vcf";
+link.download = "Elite_Cards_Studio.vcf";
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+});
+
+// 3D TILT
 const card=document.getElementById("tiltCard");
 card.addEventListener("mousemove",(e)=>{
-  const r=card.getBoundingClientRect();
-  const x=e.clientX-r.left;
-  const y=e.clientY-r.top;
-  const centerX=r.width/2;
-  const centerY=r.height/2;
-  card.style.transform=`rotateX(${((y-centerY)/centerY)*6}deg) rotateY(${((x-centerX)/centerX)*-6}deg)`;
+const r=card.getBoundingClientRect();
+const x=e.clientX-r.left;
+const y=e.clientY-r.top;
+const centerX=r.width/2;
+const centerY=r.height/2;
+card.style.transform=`rotateX(${((y-centerY)/centerY)*6}deg) rotateY(${((x-centerX)/centerX)*-6}deg)`;
 });
 card.addEventListener("mouseleave",()=>card.style.transform="rotateX(0deg) rotateY(0deg)");
 </script>
