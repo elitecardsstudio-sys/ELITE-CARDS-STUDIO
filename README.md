@@ -1,8 +1,9 @@
+
 <html lang="en">
 <head>
   <style>  
 h1, header { display:none !important; }  
-</style> 
+</style>  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elite Cards Studio</title>
@@ -38,7 +39,7 @@ body{
   to{transform:translateY(-10vh)}
 }
 
-/* GLASS CARD */
+/* CARD */
 .card{
   width:100%;
   max-width:360px;
@@ -101,25 +102,14 @@ body{
   border-radius:50%;
   animation:rgbPulse 2.8s infinite ease-in-out;
 }
-.red{
-  background:#ff3b30;
-  box-shadow:0 0 8px #ff3b30;
-  animation-delay:0s;
-}
-.green{
-  background:#34c759;
-  box-shadow:0 0 8px #34c759;
-  animation-delay:.4s;
-}
-.blue{
-  background:#007aff;
-  box-shadow:0 0 8px #007aff;
-  animation-delay:.8s;
-}
+.red{background:#ff3b30;box-shadow:0 0 8px #ff3b30;}
+.green{background:#34c759;box-shadow:0 0 8px #34c759;}
+.blue{background:#007aff;box-shadow:0 0 8px #007aff;}
+
 @keyframes rgbPulse{
-  0%{transform:scale(1);opacity:1}
+  0%{transform:scale(1)}
   50%{transform:scale(1.2);opacity:.6}
-  100%{transform:scale(1);opacity:1}
+  100%{transform:scale(1)}
 }
 
 /* NAME */
@@ -128,52 +118,62 @@ body{
   font-size:20px;
   font-weight:600;
   color:#f5d27a;
-  margin-top:2px;
 }
 .role{
   text-align:center;
   font-size:13px;
-  opacity:.85;
   margin-bottom:12px;
   color:#f5d27a;
 }
 
 /* BUTTONS */
-.btn{
-  display:block;
-  width:100%;
-  padding:14px;
-  margin:6px 0;
-  text-align:center;
-  border-radius:20px;
-  text-decoration:none;
-  font-weight:600;
-  color:#000;
-  background:linear-gradient(135deg,#f5d27a,#d4af37);
-  transition:.3s;
-}
-.btn:hover{
-  transform:translateZ(12px);
-  box-shadow:0 0 25px rgba(245,210,122,.9);
-}
-
 .grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px;
-  margin-top:10px;
 }
-.small{
-  font-size:14px;
+
+.btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
   padding:12px;
+  border-radius:18px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  color:#000;
+  background:linear-gradient(135deg,#f5d27a,#d4af37);
+  transition:all .3s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+/* ICON ANIMATION */
+.btn span{
+  display:inline-block;
+  transition:transform .3s ease;
+}
+
+.btn:hover span{
+  transform:translateY(-3px) scale(1.2);
+}
+
+/* PREMIUM GLOW */
+.btn:hover{
+  box-shadow:
+    0 0 15px rgba(245,210,122,.8),
+    0 0 35px rgba(245,210,122,.5),
+    inset 0 0 10px rgba(255,255,255,.4);
+  transform:translateY(-2px);
 }
 
 /* FOOTER */
 .footer{
   text-align:center;
   font-size:11px;
-  margin-top:12px;
-  opacity:.8;
+  margin-top:14px;
   color:#f5d27a;
   line-height:1.6;
 }
@@ -191,7 +191,7 @@ body{
 <body>
 
 <script>
-for(let i=0;i<20;i++){
+for(let i=0;i<15;i++){
   let p=document.createElement("div");
   p.className="particle";
   p.style.left=Math.random()*100+"vw";
@@ -202,12 +202,11 @@ for(let i=0;i<20;i++){
 
 <div class="card" id="tiltCard">
 
-  <img src="owner.jpg" class="profile" alt="Profile">
+  <img src="owner.jpg" class="profile">
 
   <div class="brand">ELITE</div>
   <div class="sub">CARDS STUDIO</div>
 
-  <!-- RGB Dots -->
   <div class="rgb-dots">
     <span class="dot red"></span>
     <span class="dot green"></span>
@@ -215,30 +214,33 @@ for(let i=0;i<20;i++){
   </div>
 
   <div class="name">Muneeswaran R</div>
-  <div class="role">Founder & Creative Director</div>
-
-  <a href="tel:+919655223394" class="btn">📞 Call</a>
-  <a href="https://wa.me/919655223394" class="btn">💬 WhatsApp</a>
+  <div class="role">CXO | Creative Director</div>
 
   <div class="grid">
-    <a href="Elite_Cards_Studio.vcf" download class="btn small">💾 Save</a>
-    <a href="https://www.google.com/maps/search/?api=1&query=Elite+Cards+Studio" target="_blank" class="btn small">📍 Location</a>
-    <a href="#" class="btn small">⭐ Review</a>
-    <a href="upi://pay?pa=yourupiid@upi&pn=Muneeswaran&cu=INR" class="btn small">💳 UPI</a>
-    <a href="services.html" class="btn small">🛠 Services</a>
-    <a href="https://yourwebsite.com" class="btn small">🌐 Website</a>
+
+    <a href="tel:+919655223394" class="btn"><span>📞</span>Call</a>
+    <a href="https://wa.me/919655223394" class="btn"><span>💬</span>WhatsApp</a>
+
+    <a href="Elite_Cards_Studio.vcf" download class="btn"><span>💾</span>Save</a>
+    <a href="mailto:elitecardsstudio@gmail.com" class="btn"><span>📧</span>Email</a>
+
+    <a href="https://www.google.com/maps/search/?api=1&query=Elite+Cards+Studio" target="_blank" class="btn"><span>📍</span>Location</a>
+    <a href="upi://pay?pa=9655223394@jupiteraxis&pn=Muneeswaran&cu=INR" class="btn"><span>💳</span>UPI</a>
+
+    <a href="sample-design.html" class="btn"><span>🎨</span>Samples</a>
+    <a href="https://yourwebsite.com" target="_blank" class="btn"><span>🌐</span>Website</a>
+
   </div>
 
   <div class="footer">
-    Luxury NFC Visiting Cards · Digital Identity Solutions · Premium Visiting Cards · Scary Cards <br>
-    Powered by <span class="footer-brand">Elite Cards Studio</span>
+    Luxury NFC Identity Solutions for Modern Professionals <br>
+    <span class="footer-brand">Powered by Elite Cards Studio</span>
   </div>
 
 </div>
 
 <script>
 const card=document.getElementById("tiltCard");
-
 card.addEventListener("mousemove",(e)=>{
   const r=card.getBoundingClientRect();
   const x=e.clientX-r.left;
