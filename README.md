@@ -1,8 +1,8 @@
 <html lang="en">
 <head>
-<style>  
+  <style>  
 h1, header { display:none !important; }  
-</style>  
+</style> 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elite Cards Studio</title>
@@ -41,8 +41,8 @@ body{
 /* GLASS CARD */
 .card{
   width:100%;
-  max-width:380px;
-  padding:32px 24px;
+  max-width:360px;
+  padding:26px 20px;
   border-radius:28px;
   backdrop-filter:blur(20px);
   background:rgba(255,255,255,0.06);
@@ -62,37 +62,28 @@ body{
   border:3px solid #d4af37;
   object-fit:cover;
   display:block;
-  margin:0 auto 18px;
+  margin:0 auto 12px;
 }
 
-/* GOLD SHINE ELITE */
+/* BRAND */
 .brand{
   font-family:'Playfair Display',serif;
   font-size:32px;
   text-align:center;
   letter-spacing:3px;
-  background:linear-gradient(
-    90deg,
-    #b8962e 0%,
-    #f5d27a 40%,
-    #ffffff 50%,
-    #f5d27a 60%,
-    #b8962e 100%
-  );
+  background:linear-gradient(90deg,#b8962e,#f5d27a,#fff,#f5d27a,#b8962e);
   background-size:200% auto;
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   animation:shine 4s linear infinite;
 }
-@keyframes shine{
-  to{background-position:200% center;}
-}
+@keyframes shine{ to{background-position:200% center;} }
 
 .sub{
   text-align:center;
   font-size:12px;
   letter-spacing:4px;
-  margin-bottom:6px;
+  margin-bottom:2px;
   color:#f5d27a;
   opacity:.8;
 }
@@ -102,7 +93,7 @@ body{
   display:flex;
   justify-content:center;
   gap:8px;
-  margin:8px 0 12px;
+  margin:6px 0 8px;
 }
 .dot{
   width:10px;
@@ -110,10 +101,21 @@ body{
   border-radius:50%;
   animation:rgbPulse 2.8s infinite ease-in-out;
 }
-.red{background:#ff3b30;box-shadow:0 0 8px #ff3b30;animation-delay:0s;}
-.green{background:#34c759;box-shadow:0 0 8px #34c759;animation-delay:.4s;}
-.blue{background:#007aff;box-shadow:0 0 8px #007aff;animation-delay:.8s;}
-
+.red{
+  background:#ff3b30;
+  box-shadow:0 0 8px #ff3b30;
+  animation-delay:0s;
+}
+.green{
+  background:#34c759;
+  box-shadow:0 0 8px #34c759;
+  animation-delay:.4s;
+}
+.blue{
+  background:#007aff;
+  box-shadow:0 0 8px #007aff;
+  animation-delay:.8s;
+}
 @keyframes rgbPulse{
   0%{transform:scale(1);opacity:1}
   50%{transform:scale(1.2);opacity:.6}
@@ -126,13 +128,13 @@ body{
   font-size:20px;
   font-weight:600;
   color:#f5d27a;
-  margin-top:6px;
+  margin-top:2px;
 }
 .role{
   text-align:center;
   font-size:13px;
   opacity:.85;
-  margin-bottom:20px;
+  margin-bottom:12px;
   color:#f5d27a;
 }
 
@@ -141,7 +143,7 @@ body{
   display:block;
   width:100%;
   padding:14px;
-  margin:10px 0;
+  margin:6px 0;
   text-align:center;
   border-radius:20px;
   text-decoration:none;
@@ -166,12 +168,22 @@ body{
   padding:12px;
 }
 
+/* FOOTER */
 .footer{
   text-align:center;
   font-size:11px;
-  margin-top:20px;
-  opacity:.7;
+  margin-top:12px;
+  opacity:.8;
   color:#f5d27a;
+  line-height:1.6;
+}
+.footer-brand{
+  font-weight:600;
+  background:linear-gradient(90deg,#b8962e,#f5d27a,#fff,#f5d27a,#b8962e);
+  background-size:200% auto;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:shine 6s linear infinite;
 }
 </style>
 </head>
@@ -195,6 +207,7 @@ for(let i=0;i<20;i++){
   <div class="brand">ELITE</div>
   <div class="sub">CARDS STUDIO</div>
 
+  <!-- RGB Dots -->
   <div class="rgb-dots">
     <span class="dot red"></span>
     <span class="dot green"></span>
@@ -202,20 +215,23 @@ for(let i=0;i<20;i++){
   </div>
 
   <div class="name">Muneeswaran R</div>
-  <div class="role">CXO | Premium Visiting Card Designer</div>
+  <div class="role">Founder & Creative Director</div>
 
   <a href="tel:+919655223394" class="btn">📞 Call</a>
   <a href="https://wa.me/919655223394" class="btn">💬 WhatsApp</a>
 
   <div class="grid">
     <a href="Elite_Cards_Studio.vcf" download class="btn small">💾 Save</a>
-    <a href="https://maps.google.com" class="btn small">📍 Location</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=Elite+Cards+Studio" target="_blank" class="btn small">📍 Location</a>
     <a href="#" class="btn small">⭐ Review</a>
-    <a href="#" class="btn small">📸 Instagram</a>
+    <a href="upi://pay?pa=yourupiid@upi&pn=Muneeswaran&cu=INR" class="btn small">💳 UPI</a>
+    <a href="services.html" class="btn small">🛠 Services</a>
+    <a href="https://yourwebsite.com" class="btn small">🌐 Website</a>
   </div>
 
   <div class="footer">
-    Luxury NFC Visiting Cards · Digital Identity Solutions
+    Luxury NFC Visiting Cards · Digital Identity Solutions · Premium Visiting Cards · Scary Cards <br>
+    Powered by <span class="footer-brand">Elite Cards Studio</span>
   </div>
 
 </div>
@@ -223,7 +239,6 @@ for(let i=0;i<20;i++){
 <script>
 const card=document.getElementById("tiltCard");
 
-/* MOUSE TILT */
 card.addEventListener("mousemove",(e)=>{
   const r=card.getBoundingClientRect();
   const x=e.clientX-r.left;
@@ -233,30 +248,6 @@ card.addEventListener("mousemove",(e)=>{
   card.style.transform=`rotateX(${((y-centerY)/centerY)*6}deg) rotateY(${((x-centerX)/centerX)*-6}deg)`;
 });
 card.addEventListener("mouseleave",()=>card.style.transform="rotateX(0deg) rotateY(0deg)");
-
-/* TRUE GYROSCOPE */
-if(window.DeviceOrientationEvent){
-  window.addEventListener("deviceorientation",(e)=>{
-    let x=e.beta/25;
-    let y=e.gamma/25;
-    card.style.transform=`rotateX(${x}deg) rotateY(${y}deg)`;
-  });
-}
-
-/* AUTO VCF DOWNLOAD (SAFE) */
-window.addEventListener("load",()=>{
-  if(!localStorage.getItem("eliteDownloaded")){
-    setTimeout(()=>{
-      const link=document.createElement("a");
-      link.href="Elite_Cards_Studio.vcf";
-      link.download="Elite_Cards_Studio.vcf";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      localStorage.setItem("eliteDownloaded","true");
-    },1500);
-  }
-});
 </script>
 
 </body>
