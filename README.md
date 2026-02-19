@@ -1,8 +1,11 @@
 <html lang="en">
+
 <head>
-<style>  
-h1, header { display:none !important; }  
+
+<style>
+h1, header { display:none !important; }
 </style>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -195,7 +198,7 @@ color:#f5d27a;
 }
 
 
-/* BUTTONS */
+/* BUTTON GRID */
 
 .grid{
 
@@ -208,6 +211,8 @@ gap:10px;
 }
 
 
+/* LUXURY BUTTON */
+
 .btn{
 
 display:flex;
@@ -216,11 +221,9 @@ align-items:center;
 
 justify-content:center;
 
-gap:8px;
+padding:13px;
 
-padding:12px;
-
-border-radius:18px;
+border-radius:16px;
 
 text-decoration:none;
 
@@ -228,26 +231,49 @@ font-weight:600;
 
 font-size:14px;
 
-color:#000;
+color:#f5d27a;
 
-background:linear-gradient(135deg,#f5d27a,#d4af37);
+background:rgba(255,255,255,0.05);
+
+border:1px solid rgba(212,175,55,0.5);
+
+backdrop-filter:blur(10px);
+
+box-shadow:
+
+0 0 10px rgba(212,175,55,0.2),
+
+inset 0 0 8px rgba(212,175,55,0.1);
 
 transition:all .3s ease;
-
-cursor:pointer;
 
 }
 
 
+/* HOVER */
+
 .btn:hover{
+
+color:#000;
+
+background:linear-gradient(135deg,#f5d27a,#d4af37);
 
 box-shadow:
 
-0 0 15px rgba(245,210,122,.8),
+0 0 20px rgba(212,175,55,0.8),
 
-0 0 35px rgba(245,210,122,.5);
+0 0 40px rgba(212,175,55,0.4);
 
-transform:translateY(-2px);
+transform:translateY(-3px) scale(1.03);
+
+}
+
+
+/* CLICK */
+
+.btn:active{
+
+transform:scale(.95);
 
 }
 
@@ -273,7 +299,10 @@ color:#f5d27a;
 <body>
 
 
+
 <script>
+
+/* PARTICLES */
 
 for(let i=0;i<15;i++){
 
@@ -292,6 +321,7 @@ document.body.appendChild(p);
 </script>
 
 
+
 <div class="card" id="tiltCard">
 
 
@@ -306,6 +336,7 @@ document.body.appendChild(p);
 <div class="name">Muneeswaran R</div>
 
 <div class="role">CXO | Creative Director</div>
+
 
 
 <div class="grid">
@@ -326,7 +357,13 @@ document.body.appendChild(p);
 <a href="upi://pay?pa=9655223394@jupiteraxis&pn=Muneeswaran&cu=INR" class="btn">💳 UPI</a>
 
 
+<a href="sample-design.html" class="btn">🎨 Designs</a>
+
+<a href="https://yourwebsite.com" class="btn">🌐 Website</a>
+
+
 </div>
+
 
 
 <div class="footer">
@@ -339,38 +376,23 @@ Luxury NFC Identity Solutions for Modern Professionals
 </div>
 
 
+
 <script>
 
 
-// SAVE BUTTON
-
-document.getElementById("saveBtn").addEventListener("click", function(e){
-
-e.preventDefault();
-
-downloadContact();
-
-});
-
-
-
-// AUTO DOWNLOAD
-
-window.addEventListener("load", function(){
-
-downloadContact();
-
-});
-
-
+/* DOWNLOAD FUNCTION */
 
 function downloadContact(){
 
-const link = document.createElement("a");
+if(window.saved) return;
 
-link.href = "Elite_Cards_Studio.vcf";
+window.saved=true;
 
-link.download = "Elite_Cards_Studio.vcf";
+const link=document.createElement("a");
+
+link.href="Elite_Cards_Studio.vcf";
+
+link.download="Elite_Cards_Studio.vcf";
 
 document.body.appendChild(link);
 
@@ -381,12 +403,31 @@ document.body.removeChild(link);
 }
 
 
+/* AUTO DOWNLOAD */
 
-// 3D TILT
+window.onload=function(){
+
+setTimeout(downloadContact,1000);
+
+}
+
+
+/* SAVE BUTTON */
+
+document.getElementById("saveBtn").onclick=function(e){
+
+e.preventDefault();
+
+downloadContact();
+
+}
+
+
+/* 3D TILT */
 
 const card=document.getElementById("tiltCard");
 
-card.addEventListener("mousemove",(e)=>{
+card.onmousemove=function(e){
 
 const r=card.getBoundingClientRect();
 
@@ -394,24 +435,24 @@ const x=e.clientX-r.left;
 
 const y=e.clientY-r.top;
 
-const centerX=r.width/2;
+const cx=r.width/2;
 
-const centerY=r.height/2;
+const cy=r.height/2;
 
 card.style.transform=
 
-`rotateX(${((y-centerY)/centerY)*6}deg)
+`rotateX(${((y-cy)/cy)*6}deg)
 
- rotateY(${((x-centerX)/centerX)*-6}deg)`;
+ rotateY(${((x-cx)/cx)*-6}deg)`;
 
-});
+}
 
 
-card.addEventListener("mouseleave",()=>{
+card.onmouseleave=function(){
 
-card.style.transform="rotateX(0deg) rotateY(0deg)";
+card.style.transform="rotateX(0) rotateY(0)";
 
-});
+}
 
 
 </script>
