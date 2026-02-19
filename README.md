@@ -368,7 +368,7 @@ document.body.appendChild(p);
 
 <div class="footer">
 
-Luxury NFC Identity Solutions for Modern Professionals
+“Crafting Premium Identity for Modern Professionals”
 
 </div>
 
