@@ -278,7 +278,8 @@ margin-top:14px;
   
 color:#f5d27a;  
   
-/* ✅ DESIGN POPUP CSS */
+}  
+  /* ✅ DESIGN POPUP CSS */
 
 .designPopup{
 
@@ -327,9 +328,6 @@ color:white;
 cursor:pointer;
 
 }
-
-
-
 </style>  </head>  <body>  <script>  
   
 /* PARTICLES */  
@@ -348,26 +346,6 @@ document.body.appendChild(p);
   
 }  
   
-{  
-  
-position:fixed;  
-top:0;  
-left:0;  
-  
-width:100%;  
-height:100%;  
-  
-background:rgba(0,0,0,.95);  
-  
-display:none;   ✅ correct  
-  
-align-items:center;  
-justify-content:center;  
-flex-direction:column;  
-  
-z-index:999;  
-  
-}  
 </script>  <div class="card" id="tiltCard">  <img src="owner.jpg" class="profile">  <div class="brand">ELITE</div>  <div class="sub">CARDS STUDIO</div>  <div class="name">Muneeswaran R</div>  <div class="role">CXO | Creative Director</div>  <div class="grid">  <a href="tel:+919655223394" class="btn">📞 Call</a>
 
 <a href="https://wa.me/919655223394" class="btn">💬 WhatsApp</a>
@@ -380,18 +358,41 @@ z-index:999;
 
 <a href="upi://pay?pa=9655223394@jupiteraxis&pn=Muneeswaran&cu=INR" class="btn">💳 UPI</a>
 
-<a href="#" onclick="openDesign()" class="btn">🎨 Designs</a>
+<a href="sample-design.html" class="btn">🎨 Designs</a>
 
-<div class="designPopup" id="designPopup">  <img src="design1.jpg">  
-<img src="design2.jpg">  
-<img src="design3.jpg">  
-<img src="design4.jpg">  
-<img src="design5.jpg">  </div>  <a href="https://yourwebsite.com" class="btn">🌐 Website</a>
+<a href="https://yourwebsite.com" class="btn">🌐 Website</a>
 
-</div>  <div class="footer">  “LUXURY BUSINESS CARDS | DIGITAL & QR CARDS | PREMIUM SPOT UV CARDS ”
+</div>  <div class="footer">  “Crafting Premium Identity for Modern Professionals”
+
+<!-- ✅ POPUP OUTSIDE CARD -->
+
+<div class="designPopup" id="designPopup">
+
+<span class="closeBtn" onclick="closeDesign()">✖</span>
+
+<div class="designGallery">
+
+<img src="design1.jpg">
+<img src="design2.jpg">
+<img src="design3.jpg">
+<img src="design4.jpg">
+<img src="design5.jpg">
+
+</div>
+
+</div>
 
 </div>  </div>  <script>  
   
+function openDesign(){
+
+document.getElementById("designPopup").style.display="flex";
+
+}
+
+function closeDesign(){
+
+document.getElementById("designPopup").style.display="none";
   
 /* DOWNLOAD FUNCTION */  
   
@@ -468,4 +469,4 @@ card.style.transform="rotateX(0) rotateY(0)";
 }  
   
   
-</script>  </body>  </html>  Please correct it
+</script>  </body>  </html>
