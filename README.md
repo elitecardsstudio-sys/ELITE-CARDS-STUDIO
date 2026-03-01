@@ -301,6 +301,33 @@ z-index:999;
 
 }
 
+.designGallery{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+
+}
+
+.designGallery img{
+
+width:150px;
+border:2px solid gold;
+border-radius:10px;
+
+}
+
+.closeBtn{
+
+position:absolute;
+top:20px;
+right:20px;
+font-size:30px;
+color:white;
+cursor:pointer;
+
+}
+
 
 
 </style>  </head>  <body>  <script>  
@@ -361,7 +388,7 @@ z-index:999;
 <img src="design4.jpg">  
 <img src="design5.jpg">  </div>  <a href="https://yourwebsite.com" class="btn">🌐 Website</a>
 
-</div>  <div class="footer">  “Crafting Premium Identity for Modern Professionals”
+</div>  <div class="footer">  “LUXURY BUSINESS CARDS | DIGITAL & QR CARDS | PREMIUM SPOT UV CARDS ”
 
 </div>  </div>  <script>  
   
