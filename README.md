@@ -358,7 +358,7 @@ document.body.appendChild(p);
 
 
 <a href="sample-design.html" class="btn">🎨 Designs</a>
-<img src="images/design1.jpg">
+<img src="images/design1.jpg" width="300">
 <a href="https://yourwebsite.com" class="btn">🌐 Website</a>
 
 
