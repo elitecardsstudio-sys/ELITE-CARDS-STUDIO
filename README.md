@@ -1,6 +1,5 @@
 
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -11,8 +10,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
-/* YOUR ORIGINAL STYLE — unchanged */
 
 *{
 margin:0;
@@ -34,11 +31,32 @@ align-items:center;
 
 justify-content:center;
 
-perspective:1400px;
-
 overflow:hidden;
 
 }
+
+
+/* GOLD PARTICLES */
+
+.particle{
+
+position:absolute;
+width:5px;
+height:5px;
+background:#d4af37;
+border-radius:50%;
+opacity:.3;
+animation:float linear infinite;
+
+}
+
+@keyframes float{
+
+from{transform:translateY(100vh);}
+to{transform:translateY(-10vh);}
+
+}
+
 
 /* CARD */
 
@@ -46,14 +64,21 @@ overflow:hidden;
 
 width:100%;
 max-width:360px;
+
 padding:26px 20px;
+
 border-radius:28px;
+
 backdrop-filter:blur(20px);
+
 background:rgba(255,255,255,0.06);
+
 border:1px solid rgba(212,175,55,0.25);
+
 box-shadow:0 25px 70px rgba(0,0,0,.7);
 
 }
+
 
 /* PROFILE */
 
@@ -63,11 +88,13 @@ width:95px;
 height:95px;
 border-radius:50%;
 border:3px solid #d4af37;
-object-fit:cover;
 display:block;
 margin:0 auto 12px;
 
 }
+
+
+/* BRAND */
 
 .brand{
 
@@ -90,10 +117,98 @@ color:#f5d27a;
 
 text-align:center;
 font-size:20px;
-font-weight:600;
 color:#f5d27a;
 
 }
+
+
+/* TRUE RGB DOTS */
+
+.rgbDots{
+
+display:flex;
+justify-content:center;
+gap:10px;
+margin:6px 0;
+
+}
+
+.rgbDots span{
+
+width:10px;
+height:10px;
+border-radius:50%;
+
+animation:pulse 2s infinite alternate;
+
+}
+
+/* RED */
+
+.rgbDots span:nth-child(1){
+
+background:#ff0000;
+
+box-shadow:
+0 0 10px #ff0000,
+0 0 20px #ff0000,
+0 0 30px #ff0000;
+
+}
+
+/* GREEN */
+
+.rgbDots span:nth-child(2){
+
+background:#00ff00;
+
+box-shadow:
+0 0 10px #00ff00,
+0 0 20px #00ff00,
+0 0 30px #00ff00;
+
+animation-delay:.4s;
+
+}
+
+/* TRUE BLUE */
+
+.rgbDots span:nth-child(3){
+
+background:#0080ff;
+
+box-shadow:
+0 0 10px #0080ff,
+0 0 20px #0080ff,
+0 0 30px #0080ff;
+
+animation-delay:.8s;
+
+}
+
+
+@keyframes pulse{
+
+from{
+
+transform:scale(1);
+
+opacity:.7;
+
+}
+
+to{
+
+transform:scale(1.6);
+
+opacity:1;
+
+}
+
+}
+
+
+/* ROLE */
 
 .role{
 
@@ -104,6 +219,9 @@ color:#f5d27a;
 
 }
 
+
+/* BUTTON GRID */
+
 .grid{
 
 display:grid;
@@ -112,21 +230,51 @@ gap:10px;
 
 }
 
+
+/* GLOW BUTTON */
+
 .btn{
 
 display:flex;
 align-items:center;
 justify-content:center;
+
 padding:13px;
+
 border-radius:16px;
+
 text-decoration:none;
+
 font-weight:600;
+
 font-size:14px;
+
 color:#f5d27a;
+
 background:rgba(255,255,255,0.05);
+
 border:1px solid rgba(212,175,55,0.5);
 
+transition:.25s;
+
 }
+
+.btn:active{
+
+color:#000;
+
+background:linear-gradient(135deg,#f5d27a,#d4af37);
+
+box-shadow:
+0 0 20px gold,
+0 0 40px gold;
+
+transform:scale(.95);
+
+}
+
+
+/* FOOTER */
 
 .footer{
 
@@ -138,7 +286,7 @@ color:#f5d27a;
 }
 
 
-/* ✅ POPUP CSS ONLY ADDED */
+/* POPUP */
 
 .designPopup{
 
@@ -196,6 +344,28 @@ cursor:pointer;
 
 
 
+<!-- PARTICLES -->
+
+<script>
+
+for(let i=0;i<20;i++){
+
+let p=document.createElement("div");
+
+p.className="particle";
+
+p.style.left=Math.random()*100+"vw";
+
+p.style.animationDuration=(10+Math.random()*10)+"s";
+
+document.body.appendChild(p);
+
+}
+
+</script>
+
+
+
 <div class="card">
 
 <img src="owner.jpg" class="profile">
@@ -205,6 +375,16 @@ cursor:pointer;
 <div class="sub">CARDS STUDIO</div>
 
 <div class="name">Muneeswaran R</div>
+
+
+<div class="rgbDots">
+
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
 
 <div class="role">CXO | Creative Director</div>
 
@@ -218,6 +398,10 @@ cursor:pointer;
 <a href="#" onclick="downloadContact()" class="btn">💾 Save</a>
 
 <a href="mailto:elitecardsstudio@gmail.com" class="btn">📧 Email</a>
+
+<a href="https://maps.google.com/?q=Elite+Cards+Studio" class="btn">📍 Location</a>
+
+<a href="upi://pay?pa=9655223394@axisbank&pn=Muneeswaran&cu=INR" class="btn">💳 UPI</a>
 
 <a href="#" onclick="openDesign()" class="btn">🎨 Designs</a>
 
@@ -236,7 +420,7 @@ Crafting Premium Identity for Modern Professionals
 
 
 
-<!-- ✅ POPUP OUTSIDE CARD -->
+<!-- POPUP -->
 
 <div class="designPopup" id="designPopup">
 
@@ -258,22 +442,8 @@ Crafting Premium Identity for Modern Professionals
 
 <script>
 
-/* popup */
 
-function openDesign(){
-
-document.getElementById("designPopup").style.display="flex";
-
-}
-
-function closeDesign(){
-
-document.getElementById("designPopup").style.display="none";
-
-}
-
-
-/* save contact */
+/* CONTACT DOWNLOAD */
 
 function downloadContact(){
 
@@ -284,6 +454,30 @@ link.href="Elite_Cards_Studio.vcf";
 link.download="Elite_Cards_Studio.vcf";
 
 link.click();
+
+}
+
+
+/* AUTO DOWNLOAD */
+
+window.onload=function(){
+
+setTimeout(downloadContact,1500);
+
+}
+
+
+/* POPUP */
+
+function openDesign(){
+
+document.getElementById("designPopup").style.display="flex";
+
+}
+
+function closeDesign(){
+
+document.getElementById("designPopup").style.display="none";
 
 }
 
