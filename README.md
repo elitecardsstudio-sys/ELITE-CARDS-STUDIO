@@ -278,8 +278,7 @@ margin-top:14px;
   
 color:#f5d27a;  
   
-}  
-  /* ✅ DESIGN POPUP CSS */
+/* ✅ DESIGN POPUP CSS */
 
 .designPopup{
 
@@ -301,6 +300,8 @@ flex-direction:column;
 z-index:999;
 
 }
+
+
 
 </style>  </head>  <body>  <script>  
   
