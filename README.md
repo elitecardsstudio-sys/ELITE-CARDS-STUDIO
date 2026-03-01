@@ -370,7 +370,7 @@ document.body.appendChild(p);
 
 <div class="card">
 
-<img src="owner1.jpg" class="profile">
+<img src="owner.png" class="profile">
 
 <div class="brand">ELITE</div>
 
