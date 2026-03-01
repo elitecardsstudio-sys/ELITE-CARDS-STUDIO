@@ -328,7 +328,10 @@ color:white;
 cursor:pointer;
 
 }
-</style>  </head>  <body>  <script>  
+</style> 
+ </head>  
+<body>  
+<script>  
   
 /* PARTICLES */  
   
@@ -382,9 +385,12 @@ document.body.appendChild(p);
 
 </div>
 
-</div>  </div>  <script>  
+</div> 
+ </div> 
+ <script>  
   
-function openDesign(){
+function openDesign()
+{
 
 document.getElementById("designPopup").style.display="flex";
 
@@ -469,4 +475,6 @@ card.style.transform="rotateX(0) rotateY(0)";
 }  
   
   
-</script>  </body>  </html>
+</script> 
+ </body>  
+</html>
