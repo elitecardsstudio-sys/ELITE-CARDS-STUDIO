@@ -357,7 +357,16 @@ document.body.appendChild(p);
 <a href="upi://pay?pa=9655223394@jupiteraxis&pn=Muneeswaran&cu=INR" class="btn">💳 UPI</a>
 
 
-<a href="sample-design.html" class="btn">🎨 Designs</a>
+<a href="#" onclick="openDesign()" class="btn">🎨 Designs</a>
+<div class="designPopup" id="designPopup">
+
+<img src="design1.jpg">
+<img src="design2.jpg">
+<img src="design3.jpg">
+<img src="design4.jpg">
+<img src="design5.jpg">
+
+</div>
 
 <a href="https://yourwebsite.com" class="btn">🌐 Website</a>
 
