@@ -1,7 +1,9 @@
 
 <html lang="en">
 <head>
-
+<style>  
+h1, header { display:none !important; }  
+</style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -368,7 +370,7 @@ document.body.appendChild(p);
 
 <div class="card">
 
-<img src="owner.jpg" class="profile">
+<img src="owner1.jpg" class="profile">
 
 <div class="brand">ELITE</div>
 
@@ -412,7 +414,7 @@ document.body.appendChild(p);
 
 <div class="footer">
 
-Crafting Premium Identity for Modern Professionals
+Luxury Business Cards | Digital Cards | QR Virtual Card | Premium Texture Cards | Spot UV Cards 
 
 </div>
 
