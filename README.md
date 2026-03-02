@@ -435,6 +435,11 @@ Luxury Business Cards | Digital Cards | QR Virtual Card | Premium Texture Cards 
 <img src="design3.jpg">
 <img src="design4.jpg">
 <img src="design5.jpg">
+<img src="design6.jpg">
+<img src="design7.jpg">
+<img src="design8.jpg">
+<img src="design9.jpg">
+<img src="design10.jpg">
 
 </div>
 
