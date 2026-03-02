@@ -375,6 +375,7 @@ document.body.appendChild(p);
 <div class="brand">ELITE</div>
 
 <div class="sub">CARDS STUDIO</div>
+<div class="tag">Elevate Your Brand in Every Card</div>
 
 <div class="name">Muneeswaran R</div>
 
