@@ -1,13 +1,10 @@
-
 <html lang="en" style="scroll-behavior:smooth;">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elite Cards Studio</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{min-height:100vh;}
@@ -246,7 +243,6 @@ body.modal-open{overflow:hidden;}
 </style>
 </head>
 <body>
-
 <!-- =========================================================
      SECTION 1 -- PROFILE / DIGITAL CARD
 ========================================================= -->
@@ -256,7 +252,6 @@ body.modal-open{overflow:hidden;}
     <div class="brand">ELITE</div>
     <div class="sub">CARDS STUDIO</div>
     <div class="name">Muneeswaran R</div>
-
     <div class="rgbDots"><span></span><span></span><span></span></div>
 
     <div class="role">CXO | Creative Director</div>
@@ -296,7 +291,6 @@ body.modal-open{overflow:hidden;}
 <div id="orderSection">
   <button type="button" class="modal-close" onclick="closeOrder()" aria-label="Close order form">✕</button>
   <div class="wrap">
-
     <header>
       <div class="oc-brand">
         <div class="oc-brand-mark">EC</div>
@@ -417,8 +411,9 @@ body.modal-open{overflow:hidden;}
             <div class="confirm-grid" id="confirmGrid"></div>
             <div class="confirm-actions">
               <button type="button" class="btn-primary" id="waBtn">Send to studio on WhatsApp</button>
+              <button type="button" class="btn-gold" id="emailBtn">Send to studio by Email</button>
               <button type="button" class="btn-ghost" id="editBtn">Edit this order</button>
-              <button type="button" class="btn-gold" id="newOrderBtn">＋ Create new order</button>
+              <button type="button" class="btn-ghost" id="newOrderBtn">＋ Create new order</button>
             </div>
           </div>
         </div>
@@ -427,6 +422,7 @@ body.modal-open{overflow:hidden;}
     </div>
 
     <footer>Elite Cards Studio -- this form prepares your order docket in your browser. Attach the front/back artwork files manually when you send it over WhatsApp or email, as browsers can't attach files automatically.</footer>
+
   </div>
 </div>
 
@@ -536,7 +532,7 @@ const card3d = document.getElementById('card3d');
 card3d.addEventListener('click', ()=> card3d.classList.toggle('flipped'));
 
 /* ---------- File uploads + live preview ---------- */
-function wireUpload(inputId, nameId, imgId, placeholderId, defaultPlaceholderHTML){
+function wireUpload(inputId, nameId, imgId, placeholderId){
   const input = document.getElementById(inputId);
   const nameEl = document.getElementById(nameId);
   const img = document.getElementById(imgId);
@@ -590,6 +586,9 @@ document.getElementById('dateStamp').textContent = new Date().toLocaleDateString
 const form = document.getElementById('orderForm');
 const confirmBlock = document.getElementById('confirmBlock');
 const formMsg = document.getElementById('formMsg');
+
+/* studio's own address used for the email send button */
+const STUDIO_EMAIL = 'elitecardsstudio@gmail.com';
 
 function buildOrderData(){
   return {
@@ -658,6 +657,35 @@ Estimated total: ${data.total}
 Notes: ${data.notes || '--'}
 (Front: ${data.frontFile} / Back: ${data.backFile} -- please attach these files in chat)`;
     window.open('https://wa.me/919655223394?text=' + encodeURIComponent(msg), '_blank');
+  };
+
+  document.getElementById('emailBtn').onclick = ()=>{
+    const subject = `New order ${docketId} -- Elite Cards Studio`;
+    const body =
+`New order -- Elite Cards Studio
+Docket: ${docketId}
+
+Name: ${data.name}
+Phone: ${data.phone}
+Email: ${data.email || '--'}
+Company / title: ${data.company || '--'}
+
+Delivery address: ${data.addr1}, ${data.city}, ${data.state} - ${data.pin}${data.landmark ? ' (near ' + data.landmark + ')' : ''}
+
+Finish: ${data.finish}
+Sides: ${data.sides}
+Quantity: ${data.qty}
+Design service: ${data.design}
+Estimated total: ${data.total}
+
+Notes: ${data.notes || '--'}
+
+Front artwork file: ${data.frontFile}
+Back artwork file: ${data.backFile}
+(Please attach these files to this email manually before sending)`;
+    window.location.href = 'mailto:' + STUDIO_EMAIL
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
   };
 });
 
