@@ -248,7 +248,7 @@ body{
 
     <!-- NAME -->
     <div class="name">Muneeswaran R</div>
-    <div class="role">CXO | Premium Visiting Card Designer</div>
+    <div class="role">  Premium Visiting Card Designer</div>
 
     <!-- MAIN BUTTONS -->
     <a href="tel:+919655223394" class="btn">📞 Call Now</a>
@@ -302,7 +302,7 @@ function downloadContact(){
     "N:R;Muneeswaran;;;\n" +
     "FN:Muneeswaran R\n" +
     "ORG:Elite Cards Studio\n" +
-    "TITLE:CXO | Premium Visiting Card Designer\n" +
+    "TITLE: Premium Visiting Card Designer\n" +
     "TEL;TYPE=CELL:+919655223394\n" +
     "EMAIL:elitecardsstudio@gmail.com\n" +
     "END:VCARD";
