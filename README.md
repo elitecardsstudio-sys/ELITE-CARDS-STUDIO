@@ -3,881 +3,364 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Elite Cards Studio | Digital Identity</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Elite Cards Studio</title>
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
+*{box-sizing:border-box}
 
 body{
-background:#050505;
-overflow-x:hidden;
-color:#fff;
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+  background:#000;
+  color:#f5d27a;
 }
 
-/* Animated Luxury Background */
-
-body::before{
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:
-radial-gradient(circle at 20% 20%,rgba(255,215,0,.15),transparent 20%),
-radial-gradient(circle at 80% 10%,rgba(255,215,0,.08),transparent 18%),
-radial-gradient(circle at 50% 90%,rgba(255,215,0,.10),transparent 25%);
-animation:bgMove 18s linear infinite;
-z-index:-2;
+/* CENTER */
+.wrapper{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  padding:16px 10px 40px;
 }
 
-@keyframes bgMove{
-
-0%{
-transform:scale(1) rotate(0deg);
-}
-
-100%{
-transform:scale(1.2) rotate(360deg);
-}
-
-}
-
-/* Sparkles */
-
-.sparkles{
-position:fixed;
-width:100%;
-height:100%;
-top:0;
-left:0;
-pointer-events:none;
-background-image:
-radial-gradient(#FFD700 1px,transparent 1px),
-radial-gradient(#ffffff 1px,transparent 1px),
-radial-gradient(#ffe9a8 2px,transparent 2px);
-
-background-size:80px 80px,140px 140px,180px 180px;
-
-opacity:.35;
-
-animation:spark 25s linear infinite;
-
-z-index:-1;
-
-}
-
-@keyframes spark{
-
-from{
-
-transform:translateY(0);
-
-}
-
-to{
-
-transform:translateY(-500px);
-
-}
-
-}
-
-.container{
-
-max-width:460px;
-
-margin:auto;
-
-padding:20px;
-
-}
-
-/* Main Card */
-
+/* CARD */
 .card{
-
-margin-top:25px;
-
-background:rgba(15,15,15,.75);
-
-backdrop-filter:blur(18px);
-
-border:1px solid rgba(255,215,0,.35);
-
-border-radius:28px;
-
-padding:28px 22px;
-
-text-align:center;
-
-box-shadow:
-
-0 0 30px rgba(255,215,0,.18);
-
+  width:100%;
+  max-width:380px;
+  background:#000;
+  border-radius:28px;
+  padding:20px 16px 22px;
+  border:1.5px solid #d4af37;
+  position:relative;
+  overflow:hidden;
 }
 
-/* Logo */
-
-.logo{
-
-font-size:36px;
-
-font-weight:800;
-
-letter-spacing:3px;
-
-background:linear-gradient(90deg,#FFD700,#FFF8DC,#C9A227,#FFD700);
-
--webkit-background-clip:text;
-
--webkit-text-fill-color:transparent;
-
+.card-content{
+  position:relative;
+  z-index:2;
+}
+.glitter-layer{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:1;
 }
 
-.subtitle{
-
-letter-spacing:5px;
-
-font-size:13px;
-
-margin-top:4px;
-
-color:#FFD700;
-
+.spark{
+  position:absolute;
+  bottom:-10px;
+  border-radius:50%;
+  background:radial-gradient(circle,#fff8e1 0%,#f5d27a 45%,rgba(212,175,55,0) 75%);
+  opacity:0;
+  animation-name:sparkRise;
+  animation-timing-function:ease-in;
+  animation-iteration-count:infinite;
 }
 
-/* Profile */
-
-.profile-box{
-
-width:160px;
-
-height:160px;
-
-margin:30px auto;
-
-border-radius:50%;
-
-padding:5px;
-
-background:linear-gradient(45deg,#FFD700,#FFF,#C9A227,#FFD700);
-
-animation:borderRotate 6s linear infinite;
-
-position:relative;
-
+@keyframes sparkRise{
+  0%{
+    transform:translateY(0) translateX(0) scale(.4);
+    opacity:0;
+  }
+  15%{
+    opacity:1;
+  }
+  50%{
+    opacity:.9;
+  }
+  100%{
+    transform:translateY(var(--rise)) translateX(var(--drift)) scale(1);
+    opacity:0;
+  }
 }
 
+/* PROFILE */
 .profile{
-
-width:100%;
-
-height:100%;
-
-border-radius:50%;
-
-object-fit:cover;
-
-border:4px solid #000;
-
+  width:96px;
+  height:96px;
+  margin:10px auto 6px;
+  display:block;
+  border-radius:50%;
+  border:3px solid #d4af37;
+  object-fit:cover;
 }
 
-.profile-box::before{
-
-content:"";
-
-position:absolute;
-
-inset:-12px;
-
-border-radius:50%;
-
-background:conic-gradient(transparent,#FFD700,transparent,#FFF);
-
-filter:blur(14px);
-
-z-index:-1;
-
-animation:halo 3s linear infinite;
-
+/* BRAND */
+.brand{
+  text-align:center;
+  font-size:28px;
+  font-weight:700;
+  letter-spacing:2px;
+  margin-top:6px;
 }
 
-@keyframes borderRotate{
-
-100%{
-
-transform:rotate(360deg);
-
+.brand-sub{
+  text-align:center;
+  font-size:13px;
+  letter-spacing:4px;
+  margin-bottom:6px;
 }
 
-}
-
-@keyframes halo{
-
-100%{
-
-transform:rotate(-360deg);
-
-}
-
-}
-
-/* Name */
-
+/* NAME */
 .name{
-
-font-size:28px;
-
-font-weight:700;
-
-margin-top:10px;
-
+  text-align:center;
+  font-size:20px;
+  font-weight:600;
+  margin-top:6px;
 }
 
 .role{
-
-font-size:15px;
-
-color:#FFD700;
-
-margin-top:6px;
-
-margin-bottom:30px;
-
+  text-align:center;
+  font-size:13px;
+  opacity:.85;
+  margin-bottom:16px;
 }
 
-/* Buttons */
+/* TOUCH FLASH */
+@keyframes touchFlash{
+  0%{box-shadow:0 0 0 rgba(212,175,55,0)}
+  40%{box-shadow:0 0 18px rgba(245,210,122,.95)}
+  100%{box-shadow:0 0 0 rgba(212,175,55,0)}
+}
 
+/* BUTTONS */
 .btn{
-
-display:block;
-
-margin:12px 0;
-
-padding:16px;
-
-border-radius:18px;
-
-text-decoration:none;
-
-font-weight:700;
-
-font-size:16px;
-
-color:#111;
-
-background:linear-gradient(135deg,#FFF8DC,#FFD700,#C9A227);
-
-transition:.35s;
-
-position:relative;
-
-overflow:hidden;
-
-box-shadow:0 0 18px rgba(255,215,0,.30);
-
+  display:block;
+  width:100%;
+  text-align:center;
+  padding:14px;
+  margin:10px 0;
+  background:linear-gradient(135deg,#f5d27a,#d4af37);
+  color:#000;
+  text-decoration:none;
+  font-weight:600;
+  border-radius:14px;
+  transition:transform .15s ease;
 }
 
-.btn::before{
-
-content:"";
-
-position:absolute;
-
-top:-100%;
-
-left:-100%;
-
-width:300%;
-
-height:300%;
-
-background:linear-gradient(120deg,
-
-transparent,
-
-rgba(255,255,255,.8),
-
-transparent);
-
-transform:rotate(25deg);
-
-transition:.6s;
-
+.btn:active{
+  transform:scale(.97);
+  animation:touchFlash .5s ease;
 }
 
-.btn:hover::before{
-
-left:100%;
-
-}
-
-.btn:hover{
-
-transform:translateY(-4px) scale(1.03);
-
-box-shadow:
-
-0 0 12px #FFD700,
-
-0 0 35px #FFD700,
-
-0 0 70px rgba(255,215,0,.5);
-
-}
-
-/* Grid */
-
+/* GRID */
 .grid{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:12px;
-
-margin-top:10px;
-
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:8px;
 }
 
 .small{
-
-font-size:14px;
-
-padding:14px;
-
+  padding:12px;
+  font-size:14px;
+  margin:0;
 }
 
-.section-title{
-
-font-size:22px;
-
-margin:35px 0 20px;
-
-font-weight:700;
-
-color:#FFD700;
-
-text-align:center;
-
+/* FOOTER */
+.footer{
+  margin-top:16px;
+  font-size:11px;
+  text-align:center;
+  line-height:1.6;
+  opacity:.8;
 }
 
+/* SAMPLE DESIGNS MODAL */
+.modal-overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  z-index:100;
+  padding:20px 12px;
+  overflow-y:auto;
+}
+
+.modal-overlay.open{
+  display:block;
+}
+
+.modal-box{
+  max-width:400px;
+  margin:0 auto;
+  background:#000;
+  border:1.5px solid #d4af37;
+  border-radius:20px;
+  padding:16px;
+}
+
+.modal-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+}
+
+.modal-title{
+  font-size:17px;
+  font-weight:700;
+  color:#f5d27a;
+}
+
+.modal-close{
+  background:none;
+  border:1px solid #d4af37;
+  color:#f5d27a;
+  border-radius:8px;
+  width:30px;
+  height:30px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.sample-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.sample-grid img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:10px;
+  border:1px solid #d4af37;
+}
 </style>
 </head>
 
 <body>
 
-<div class="sparkles"></div>
+<div class="wrapper">
+  <div class="card">
 
-<div class="container">
+    <div class="glitter-layer" id="glitterLayer"></div>
 
-<div class="card">
+    <div class="card-content">
 
-<div class="logo">ELITE</div>
+    <!-- PROFILE -->
+    <img src="owner.jpg" class="profile" alt="Profile Photo">
 
-<div class="subtitle">CARDS STUDIO</div>
+    <!-- BRAND -->
+    <div class="brand">ELITE</div>
+    <div class="brand-sub">CARDS STUDIO</div>
 
-<div class="profile-box">
+    <!-- NAME -->
+    <div class="name">Muneeswaran R</div>
+    <div class="role">CXO | Premium Visiting Card Designer</div>
 
-<img src="owner.jpg" class="profile" alt="Owner Photo">
+    <!-- MAIN BUTTONS -->
+    <a href="tel:+919655223394" class="btn">📞 Call Now</a>
+    <a href="https://wa.me/919655223394" class="btn">💬 WhatsApp</a>
 
+    <!-- GRID BUTTONS -->
+    <div class="grid">
+      <a href="mailto:elitecardsstudio@gmail.com" class="btn small">📧 Email</a>
+      <a href="#" class="btn small" onclick="downloadContact();return false;">💾 Save Contact</a>
+      <a href="https://maps.google.com" class="btn small">📍 Location</a>
+      <a href="upi://pay?pa=9655223394@upi&pn=Elite%20Cards%20Studio&cu=INR" class="btn small">💳 Pay</a>
+    </div>
+
+    <!-- EXTRA -->
+    <a href="#" class="btn">⭐ Google Review</a>
+    <a href="#" class="btn" onclick="openSamples();return false;">🎨 Sample Designs</a>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      Luxury NFC Visiting Cards · Digital Business Cards · Corporate Bulk Business Cards<br>
+      Letterheads · QR Code & Smart Profiles
+    </div>
+
+    </div>
+
+  </div>
 </div>
 
-<div class="name">MUNEESWARAN R</div>
-
-<div class="role">Digital Designer | Founder</div>
-
-<a class="btn" href="tel:+919655223394">📞 Call Now</a>
-
-<a class="btn" href="https://wa.me/919655223394?text=Hello%20Elite%20Cards%20Studio">💬 WhatsApp</a>
-
-<div class="grid">
-
-<a class="btn small" href="mailto:elitecardsstudio@gmail.com">📧 Email</a>
-
-<a class="btn small" href="https://maps.app.goo.gl/UYX1TGwYeXoGQxQH9?g_st=ac">📍 Location</a>
-
-<a class="btn small" href="#">💳 Payment</a>
-
-<a class="btn small" href="elitecards.vcf" download>💾 Save Contact</a>
-
-</div>
-<!-- ========================= -->
-<!-- SERVICES -->
-<!-- ========================= -->
-
-<div class="section-title">✨ Our Services</div>
-
-<div class="grid">
-
-<a class="btn small" href="#">
-💼 Visiting Cards
-</a>
-
-<a class="btn small" href="#">
-🎨 Logo Design
-</a>
-
-<a class="btn small" href="#">
-🖨 Letter Head
-</a>
-
-<a class="btn small" href="#">
-📦 Product Labels
-</a>
-
-<a class="btn small" href="#">
-📢 Flex Banner
-</a>
-
-<a class="btn small" href="#">
-💍 Wedding Cards
-</a>
-
-<a class="btn small" href="#">
-🆔 ID Cards
-</a>
-
-<a class="btn small" href="#">
-📱 Digital Cards
-</a>
-
+<!-- SAMPLE DESIGNS MODAL -->
+<div class="modal-overlay" id="samplesModal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-title">Sample Designs</div>
+      <button class="modal-close" onclick="closeSamples()">✕</button>
+    </div>
+    <div class="sample-grid">
+      <img src="sample1.jpg" alt="Sample Design 1">
+      <img src="sample2.jpg" alt="Sample Design 2">
+      <img src="sample3.jpg" alt="Sample Design 3">
+      <img src="sample4.jpg" alt="Sample Design 4">
+    </div>
+  </div>
 </div>
 
-<!-- ========================= -->
-<!-- SAMPLE DESIGNS -->
-<!-- ========================= -->
-
-<div class="section-title">
-🎨 Sample Designs
-</div>
-
-<div style="display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px;">
-
-<img src="sample1.jpg"
-style="width:100%;
-border-radius:16px;
-border:2px solid gold;
-box-shadow:0 0 20px rgba(255,215,0,.25);">
-
-<img src="sample2.jpg"
-style="width:100%;
-border-radius:16px;
-border:2px solid gold;
-box-shadow:0 0 20px rgba(255,215,0,.25);">
-
-<img src="sample3.jpg"
-style="width:100%;
-border-radius:16px;
-border:2px solid gold;
-box-shadow:0 0 20px rgba(255,215,0,.25);">
-
-<img src="sample4.jpg"
-style="width:100%;
-border-radius:16px;
-border:2px solid gold;
-box-shadow:0 0 20px rgba(255,215,0,.25);">
-
-</div>
-
-<br>
-
-<a class="btn"
-href="https://your-gallery-link.com">
-
-🖼 View Complete Portfolio
-
-</a>
-
-<!-- ========================= -->
-<!-- DESIGN UPLOAD -->
-<!-- ========================= -->
-
-<div class="section-title">
-
-📤 Design Upload
-
-</div>
-
-<form>
-
-<input type="text"
-placeholder="Your Name"
-
-style="width:100%;
-padding:15px;
-margin-bottom:12px;
-border-radius:12px;
-border:none;
-font-size:15px;">
-
-<input type="tel"
-placeholder="Mobile Number"
-
-style="width:100%;
-padding:15px;
-margin-bottom:12px;
-border-radius:12px;
-border:none;
-font-size:15px;">
-
-<input type="file"
-
-style="width:100%;
-padding:15px;
-margin-bottom:12px;
-background:white;
-border-radius:12px;">
-
-<textarea
-placeholder="Design Instructions"
-
-style="width:100%;
-height:120px;
-padding:15px;
-border-radius:12px;
-border:none;
-margin-bottom:15px;
-font-size:15px;"></textarea>
-
-<button class="btn"
-type="submit">
-
-📤 Submit Design
-
-</button>
-
-</form>
-
-<!-- ========================= -->
-<!-- ONLINE PAYMENT -->
-<!-- ========================= -->
-
-<div class="section-title">
-
-💳 Online Payment
-
-</div>
-
-<a class="btn"
-href="upi://pay?pa=YOURUPI@upi&pn=Elite%20Cards%20Studio&cu=INR">
-
-💰 Pay Using UPI
-
-</a>
-
-<img src="upi-qr.png"
-
-style="width:220px;
-display:block;
-margin:auto;
-border-radius:18px;
-border:3px solid gold;
-box-shadow:0 0 25px rgba(255,215,0,.4);">
-
-<br>
-
-<!-- ========================= -->
-<!-- GOOGLE REVIEW -->
-<!-- ========================= -->
-
-<a class="btn"
-
-href="https://g.page/r/REPLACE_REVIEW_LINK">
-
-⭐⭐⭐⭐⭐
-
-Leave Google Review
-
-</a>
-
-<a class="btn"
-
-href="#">
-
-📲 Share Digital Card
-
-</a>
-<!-- ========================= -->
-<!-- FLOATING BUTTONS -->
-<!-- ========================= -->
-
-<a href="https://wa.me/919655223394"
-class="float-whatsapp">
-💬
-</a>
-
-<a href="tel:+919655223394"
-class="float-call">
-📞
-</a>
-
-<style>
-
-.float-whatsapp,
-.float-call{
-
-position:fixed;
-
-right:18px;
-
-width:60px;
-
-height:60px;
-
-border-radius:50%;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:30px;
-
-text-decoration:none;
-
-color:#fff;
-
-z-index:9999;
-
-box-shadow:0 0 25px rgba(255,215,0,.45);
-
-animation:pulse 2s infinite;
-
-}
-
-.float-whatsapp{
-
-bottom:90px;
-
-background:#25D366;
-
-}
-
-.float-call{
-
-bottom:18px;
-
-background:#FFD700;
-
-color:#000;
-
-}
-
-@keyframes pulse{
-
-0%{
-
-transform:scale(1);
-
-}
-
-50%{
-
-transform:scale(1.08);
-
-}
-
-100%{
-
-transform:scale(1);
-
-}
-
-}
-
-.footer{
-
-margin-top:40px;
-
-padding:25px 10px;
-
-text-align:center;
-
-border-top:1px solid rgba(255,215,0,.25);
-
-color:#FFD700;
-
-font-size:14px;
-
-line-height:28px;
-
-}
-
-.footer h3{
-
-font-size:24px;
-
-margin-bottom:8px;
-
-letter-spacing:2px;
-
-}
-
-</style>
-
-<div class="footer">
-
-<h3>ELITE CARDS STUDIO</h3>
-
-Creative Design • Premium Printing • Digital Identity
-
-<br><br>
-
-© 2026 Elite Cards Studio
-
-</div>
-
-</div>
-
-</div>
-
+<!-- AUTO DOWNLOAD CONTACT -->
 <script>
+function downloadContact(){
+  const vcard =
+    "BEGIN:VCARD\n" +
+    "VERSION:3.0\n" +
+    "N:R;Muneeswaran;;;\n" +
+    "FN:Muneeswaran R\n" +
+    "ORG:Elite Cards Studio\n" +
+    "TITLE:CXO | Premium Visiting Card Designer\n" +
+    "TEL;TYPE=CELL:+919655223394\n" +
+    "EMAIL:elitecardsstudio@gmail.com\n" +
+    "END:VCARD";
 
-/* ===========================
-GLITTER EFFECT
-=========================== */
-
-document.querySelectorAll(".btn").forEach(button=>{
-
-button.addEventListener("click",function(e){
-
-for(let i=0;i<35;i++){
-
-const sparkle=document.createElement("span");
-
-sparkle.innerHTML=["✨","⭐","💛"][Math.floor(Math.random()*3)];
-
-sparkle.style.position="fixed";
-
-sparkle.style.left=e.clientX+"px";
-
-sparkle.style.top=e.clientY+"px";
-
-sparkle.style.fontSize=(12+Math.random()*20)+"px";
-
-sparkle.style.pointerEvents="none";
-
-sparkle.style.transition="all 1s ease";
-
-sparkle.style.zIndex="99999";
-
-document.body.appendChild(sparkle);
-
-setTimeout(()=>{
-
-sparkle.style.transform=
-
-`translate(${(Math.random()-0.5)*280}px,
-
-${(Math.random()-0.5)*280}px)
-
-rotate(720deg)
-
-scale(0)`;
-
-sparkle.style.opacity="0";
-
-},20);
-
-setTimeout(()=>{
-
-sparkle.remove();
-
-},1000);
-
+  const blob = new Blob([vcard], { type: "text/vcard" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "Elite_Cards_Studio.vcf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
 }
 
+// Auto-trigger contact download shortly after the page loads
+window.addEventListener("load", () => {
+  setTimeout(downloadContact, 1500);
 });
 
-});
-
-/* ===========================
-MOUSE GLOW
-=========================== */
-
-const glow=document.createElement("div");
-
-glow.style.position="fixed";
-
-glow.style.width="20px";
-
-glow.style.height="20px";
-
-glow.style.borderRadius="50%";
-
-glow.style.background="gold";
-
-glow.style.filter="blur(18px)";
-
-glow.style.pointerEvents="none";
-
-glow.style.zIndex="99999";
-
-document.body.appendChild(glow);
-
-document.addEventListener("mousemove",e=>{
-
-glow.style.left=(e.clientX-10)+"px";
-
-glow.style.top=(e.clientY-10)+"px";
-
-});
-
-/* ===========================
-BUTTON SHIMMER
-=========================== */
-
-setInterval(()=>{
-
-document.querySelectorAll(".btn").forEach(btn=>{
-
-btn.animate([
-
-{
-
-boxShadow:"0 0 10px gold"
-
-},
-
-{
-
-boxShadow:"0 0 45px white"
-
-},
-
-{
-
-boxShadow:"0 0 10px gold"
-
+function openSamples(){
+  document.getElementById("samplesModal").classList.add("open");
+}
+function closeSamples(){
+  document.getElementById("samplesModal").classList.remove("open");
 }
 
-],{
+// GLITTER PARTICLES rising from the bottom of the card
+function createGlitter(){
+  const layer = document.getElementById("glitterLayer");
+  const cardHeight = layer.parentElement.offsetHeight;
+  const count = 22;
 
-duration:1500
+  for(let i = 0; i < count; i++){
+    const spark = document.createElement("div");
+    spark.className = "spark";
 
-});
+    const size = 2 + Math.random() * 3;
+    const left = Math.random() * 100;
+    const rise = cardHeight * (0.5 + Math.random() * 0.55);
+    const drift = (Math.random() * 40) - 20;
+    const duration = 3 + Math.random() * 3.5;
+    const delay = Math.random() * 6;
 
-});
+    spark.style.width = size + "px";
+    spark.style.height = size + "px";
+    spark.style.left = left + "%";
+    spark.style.setProperty("--rise", -rise + "px");
+    spark.style.setProperty("--drift", drift + "px");
+    spark.style.animationDuration = duration + "s";
+    spark.style.animationDelay = delay + "s";
 
-},2500);
+    layer.appendChild(spark);
+  }
+}
 
+window.addEventListener("load", createGlitter);
 </script>
 
 </body>
-
 </html>
