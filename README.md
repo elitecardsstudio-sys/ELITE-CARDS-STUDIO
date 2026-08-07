@@ -1,18 +1,11 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-
-<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite Cards Studio</title>
 
 <style>
-header{
-    display:none !important;
-}
-
-h1:first-child{
-    display:none !important;
-}
-</style>
 *{box-sizing:border-box}
 
 body{
@@ -255,7 +248,7 @@ body{
 
     <!-- NAME -->
     <div class="name">Muneeswaran R</div>
-    <div class="role">  Premium Visiting Card Designer</div>
+    <div class="role"> Premium Visiting Card Designer</div>
 
     <!-- MAIN BUTTONS -->
     <a href="tel:+919655223394" class="btn">📞 Call Now</a>
@@ -275,7 +268,7 @@ body{
 
     <!-- FOOTER -->
     <div class="footer">
-      Luxury NFC Visiting Cards · Digital Business Cards · Corporate Bulk Business Cards<br>
+      Luxury  Visiting Cards · Digital Business Cards · Corporate Bulk Business Cards<br>
       Letterheads · QR Code & Smart Profiles
     </div>
 
@@ -292,7 +285,7 @@ body{
       <button class="modal-close" onclick="closeSamples()">✕</button>
     </div>
     <div class="sample-grid">
-      <img src="sample1.jpg" alt="Sample Design 1">
+      <img src="sample1.jpg" alt="design1">
       <img src="sample2.jpg" alt="Sample Design 2">
       <img src="sample3.jpg" alt="Sample Design 3">
       <img src="sample4.jpg" alt="Sample Design 4">
@@ -309,7 +302,7 @@ function downloadContact(){
     "N:R;Muneeswaran;;;\n" +
     "FN:Muneeswaran R\n" +
     "ORG:Elite Cards Studio\n" +
-    "TITLE: Premium Visiting Card Designer\n" +
+    "TITLE:CXO | Premium Visiting Card Designer\n" +
     "TEL;TYPE=CELL:+919655223394\n" +
     "EMAIL:elitecardsstudio@gmail.com\n" +
     "END:VCARD";
