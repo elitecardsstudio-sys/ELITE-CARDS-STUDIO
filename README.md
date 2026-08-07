@@ -6,9 +6,8 @@
 <title>Elite Cards Studio</title>
 
 <style>
-/* Hide heading */
-header{
-    display:none !important;
+{
+  display: none !important;
 }
 *{box-sizing:border-box}
 
