@@ -240,7 +240,7 @@ body{
     <div class="card-content">
 
     <!-- PROFILE -->
-    <img src="owner.jpg" class="profile" alt="Profile Photo">
+    <img src="owner.png" class="profile" alt="Profile Photo">
 
     <!-- BRAND -->
     <div class="brand">ELITE</div>
