@@ -6,6 +6,9 @@
 <title>Elite Cards Studio</title>
 
 <style>
+  h1 {
+    display: none;
+}
 *{box-sizing:border-box}
 
 body{
