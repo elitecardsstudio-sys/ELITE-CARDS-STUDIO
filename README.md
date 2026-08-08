@@ -285,10 +285,10 @@ body{
       <button class="modal-close" onclick="closeSamples()">✕</button>
     </div>
     <div class="sample-grid">
-      <img src="sample1.jpg" alt="design1">
-      <img src="sample2.jpg" alt="Sample Design 2">
-      <img src="sample3.jpg" alt="Sample Design 3">
-      <img src="sample4.jpg" alt="Sample Design 4">
+      <img src="design1.jpg" alt="Sample Design 1">
+      <img src="design2.jpg" alt="Sample Design 2">
+      <img src="design3.jpg" alt="Sample Design 3">
+      <img src="design4.jpg" alt="Sample Design 4">
     </div>
   </div>
 </div>
