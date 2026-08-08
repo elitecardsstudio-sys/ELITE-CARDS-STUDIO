@@ -28,8 +28,8 @@ body{
 
 /* CARD */
 .card{
-  width:82%;
-  max-width:360px;
+  width:100%;
+  max-width:430px;
   background:#000;
   border-radius:28px;
   padding:14px 12px 16px;
