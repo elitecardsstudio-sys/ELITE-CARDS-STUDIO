@@ -9,6 +9,49 @@
   h1 {
     display: none;
 }
+.color-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: blink 1.5s infinite;
+}
+
+.red {
+  background: #ff3030;
+  box-shadow: 0 0 8px #ff3030;
+  animation-delay: 0s;
+}
+
+.green {
+  background: #00ff40;
+  box-shadow: 0 0 8px #00ff40;
+  animation-delay: 0.5s;
+}
+
+.blue {
+  background: #168cff;
+  box-shadow: 0 0 8px #168cff;
+  animation-delay: 1s;
+}
+
+@keyframes blink {
+  0%, 30%, 100% {
+    opacity: 0.25;
+    transform: scale(0.8);
+  }
+
+  15% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
 *{box-sizing:border-box}
 
 body{
@@ -248,6 +291,11 @@ body{
     <!-- BRAND -->
     <div class="brand">ELITE</div>
     <div class="brand-sub">CARDS STUDIO</div>
+<div class="color-dots">
+  <span class="dot red"></span>
+  <span class="dot green"></span>
+  <span class="dot blue"></span>
+</div>
 
     <!-- NAME -->
     <div class="name">Muneeswaran R</div>
