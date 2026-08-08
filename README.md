@@ -75,7 +75,7 @@ body{
   max-width:430px;
   background:#000;
   border-radius:28px;
-  padding:8px 12px 6px;
+  padding:10px 12px 8px;
   border:1.5px solid #d4af37;
   position:relative;
   overflow:hidden;
