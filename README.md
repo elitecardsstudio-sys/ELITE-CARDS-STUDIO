@@ -289,6 +289,13 @@ body{
       <img src="design2.jpg" alt="Sample Design 2">
       <img src="design3.jpg" alt="Sample Design 3">
       <img src="design4.jpg" alt="Sample Design 4">
+       <img src="design5.jpg" alt="Sample Design 5">
+       <img src="design6.jpg" alt="Sample Design 6">
+       <img src="design7.jpg" alt="Sample Design 7">
+       <img src="design8.jpg" alt="Sample Design 8">
+       <img src="design9.jpg" alt="Sample Design 9">
+       <img src="design10.jpg" alt="Sample Design 10">
+       <img src="design11.png" alt="Sample Design 11">
     </div>
   </div>
 </div>
