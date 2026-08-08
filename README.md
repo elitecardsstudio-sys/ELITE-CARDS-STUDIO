@@ -29,10 +29,10 @@ body{
 /* CARD */
 .card{
   width:100%;
-  max-width:380px;
+  max-width:430px;
   background:#000;
   border-radius:28px;
-  padding:20px 16px 22px;
+  padding:14px 12px 16px;
   border:1.5px solid #d4af37;
   position:relative;
   overflow:hidden;
